@@ -9,3 +9,15 @@
     background-size: cover;
     opacity: 0.9;
 }
+
+.glow {
+    background-color: #03E2E1;
+}
+
+.glow1:hover {
+    box-shadow: 0 0 5px #03E2E1,
+        0 0 25px #03E2E1,
+        0 0 50px #03E2E1,
+        0 0 100px #03E2E1;
+        background-color: #03E2E1;
+}
