@@ -53,3 +53,8 @@
     top: 24% !important;
     left: 24%;
 }
+
+.bgGlass{
+    background-image: url(/glass.png) !important;
+    background-size: contain;
+}

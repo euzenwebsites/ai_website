@@ -1,7 +1,6 @@
 "use client"
 import React, { useState } from "react";
 import Image from "next/image";
-import Cookie from "./Cookie";
 
 const Hero = () => {
     const [placeholder, setPlaceholder] = useState('')
@@ -20,10 +19,16 @@ const Hero = () => {
     const [multiple, setMultiple] = useState(false)
     let [ImageArr, setImageArr] = useState([]);
     const [isHovered, setIsHovered] = useState(false);
+    const [isHovered1, setIsHovered1] = useState(false);
+    const [isHovered2, setIsHovered2] = useState(false);
+    const [isHovered3, setIsHovered3] = useState(false);
+    const [isHovered4, setIsHovered4] = useState(false);
+    const [isHovered5, setIsHovered5] = useState(false);
+    const [isHovered6, setIsHovered6] = useState(false);
+    const [isHovered7, setIsHovered7] = useState(false);
 
     const toggleConditon = (src, func) => {
         if (src !== placeholder && src !== placeholder1 && src !== placeholder2 && src !== placeholder3 && src !== placeholder4) {
-            console.log(ImageArr);
             if (placeholder === '') {
                 setImageArr([...ImageArr, src])
                 setPlaceholder(src)
@@ -43,7 +48,6 @@ const Hero = () => {
             } else if (placeholder4 === '') {
                 setImageArr([...ImageArr, src])
                 setPlaceholder4(src)
-                console.log(ImageArr);
                 if (ImageArr.length === 4) setMultiple(true)
                 return
             } else {
@@ -57,28 +61,28 @@ const Hero = () => {
             return
 
         } else {
-            if (src === '/contact.png') {
+            if (src === '/contactActive.png') {
                 setCondition(true)
                 return
-            } else if (src === '/omni.png') {
+            } else if (src === '/omniActive.png') {
                 setCondition1(true)
                 return
-            } else if (src === '/scheduling.png') {
+            } else if (src === '/schedulingActive.png') {
                 setCondition2(true)
                 return
-            } else if (src === '/chatbots.png') {
+            } else if (src === '/chatbotsActive.png') {
                 setCondition3(true)
                 return
-            } else if (src === '/signature.png') {
+            } else if (src === '/signatureActive.png') {
                 setCondition4(true)
                 return
-            } else if (src === '/secure.png') {
+            } else if (src === '/secureActive.png') {
                 setCondition5(true)
                 return
-            } else if (src === '/learning.png') {
+            } else if (src === '/learningActive.png') {
                 setCondition6(true)
                 return
-            } else if (src === '/private.png') {
+            } else if (src === '/privateActive.png') {
                 setCondition7(true)
                 return
             }
@@ -86,73 +90,72 @@ const Hero = () => {
         }
     }
     return (
-        <section className="flex flex-col items-center px-9 z-0 mt-20 ">
-            <div className="relative bg-gray-50">
+        <section className="flex flex-col items-center px-9 z-0 mt-24 ">
+            <div className="relative">
                 <div className="h-56 w-[970px] absolute bottom-[135px] right-[61px]">
                     <div className="flex justify-center items-center h-full w-full flex-col">
                         <h1 className="text-black text-5xl font-bold text-center"> <span className="text-[#03E2E1]">Every</span> <span className="font-normal">Tool </span>your business <span className="text-[#03E2E1]">Needs</span>,  </h1>
                         <h1 className="text-[#03E2E1] pt-3 text-6xl font-bold text-center">In-One-Place<span className="text-[black!important]">...</span> </h1>
                     </div>
                 </div>
-                <Image src={'/ring.png'} className="h-[90%] w-[1100px]" width={1100} height={950} />
+                <Image src={'/ring.png'} alt="ring" className="h-[90%] w-[1100px]" width={1100} height={950} />
                 {/* {!multiple && ( */}
                 <>
-                    <div className={`bg-[#d3dfe0] glow w-[140px] h-[140px] p-2 ${placeholder !== "" ? "cursor-pointer" : 'cursor-auto'} rounded-full h-36 w-36 absolute bottom-14 left-16 `}>
+                    <div className={`w-[140px] h-[140px] p-2 ${placeholder !== "" ? "cursor-pointer bg-transparent" : 'cursor-auto'} rounded-full h-36 w-36 absolute bottom-14 left-16 bgGlass`}>
                         <div className="flex justify-center items-center w-full h-full">
-                            <img src={placeholder} height={140} width={140} className=" opacity-55" onClick={() => {
+                            {placeholder ? (<img alt={placeholder} src={placeholder} height={140} width={140} onClick={() => {
                                 toggleConditon(placeholder);
                                 setPlaceholder('');
                                 setImageArr(ImageArr.filter(val => val !== placeholder))
-                            }} />
+                            }} />) : (<p></p>)}
                         </div>
                     </div>
-                    <div className={`bg-[#d3dfe0] w-[140px] h-[140px] p-2 ${placeholder1 !== "" ? "cursor-pointer" : 'cursor-auto'} rounded-full h-36 w-36 absolute bottom-4 left-52`}>
+                    <div className={`w-[140px] h-[140px] p-2 ${placeholder1 !== "" ? "cursor-pointer bg-transparent" : 'cursor-auto'} rounded-full h-36 w-36 absolute bottom-4 left-56 bgGlass `}>
                         <div className="flex justify-center items-center w-full h-full">
-                            <img src={placeholder1} height={140} width={140} className=" opacity-55" onClick={() => {
+                            {placeholder1 && <img alt={placeholder1} src={placeholder1} height={140} width={140} onClick={() => {
                                 toggleConditon(placeholder1);
                                 setPlaceholder1('');
                                 setImageArr(ImageArr.filter(val => val !== placeholder1))
-                            }} />
+                            }} />}
                         </div>
                     </div>
-                    <div className={`bg-[#d3dfe0] w-[140px] h-[140px] p-2 ${placeholder2 !== "" ? "cursor-pointer" : 'cursor-auto'} rounded-full h-36 w-36 absolute bottom-14 right-24`}>
+                    <div className={`w-[140px] h-[140px] p-2 ${placeholder2 !== "" ? "cursor-pointer bg-transparent" : 'cursor-auto'} rounded-full h-36 w-36 absolute bottom-14 right-24 bgGlass`}>
                         <div className="flex justify-center items-center w-full h-full">
-                            <img src={placeholder2} height={140} width={140} className=" opacity-55" onClick={() => {
+                            {placeholder2 && <img alt={placeholder2} src={placeholder2} height={140} width={140} onClick={() => {
                                 toggleConditon(placeholder2);
                                 setPlaceholder2('');
                                 setImageArr(ImageArr.filter(val => val !== placeholder2))
-                            }} />
+                            }} />}
                         </div>
                     </div>
 
-                    <div className={`bg-[#d3dfe0] w-[140px] h-[140px] p-2 ${placeholder3 !== "" ? "cursor-pointer" : 'cursor-auto'} rounded-full h-36 w-36 absolute bottom-3 right-64`}>
+                    <div className={`w-[140px] h-[140px] p-2 ${placeholder3 !== "" ? "cursor-pointer bg-transparent" : 'cursor-auto'} rounded-full h-36 w-36 absolute bottom-3 right-64 bgGlass`}>
                         <div className="flex justify-center items-center w-full h-full">
-                            <img src={placeholder3} height={140} width={140} className=" opacity-55" onClick={() => {
+                            {placeholder3 && <img alt={placeholder3} src={placeholder3} height={140} width={140} onClick={() => {
                                 toggleConditon(placeholder3);
                                 setPlaceholder3('');
                                 setImageArr(ImageArr.filter(val => val !== placeholder3))
-                            }} />
+                            }} />}
                         </div>
                     </div>
-                    <div className={`bg-[#d3dfe0] w-[140px] h-[140px] p-2 ${placeholder4 !== "" ? "cursor-pointer" : 'cursor-auto'} rounded-full h-36 w-36 absolute bottom-3 right-0 hidden`}>
+                    <div className={`w-[140px] h-[140px] p-2 ${placeholder4 !== "" ? "cursor-pointer bg-transparent" : 'cursor-auto'} rounded-full h-36 w-36 absolute bottom-3 right-0 hidden bgGlass`}>
                         <div className="flex justify-center items-center w-full h-full">
-                            <img src={placeholder4} height={140} width={140} className=" opacity-55" onClick={() => {
+                            {placeholder4 && <img alt={placeholder4} src={placeholder4} height={140} width={140} onClick={() => {
                                 toggleConditon(placeholder4);
                                 setPlaceholder4('');
                                 setImageArr(ImageArr.filter(val => val !== placeholder4))
-                            }} />
+                            }} />}
                         </div>
                     </div>
                 </>
                 {/* {)}} */}
-                {console.log(multiple)}
                 <div className={`bgBanner bg-[#d3dfe0] rounded ${multiple && 'h-36 w-[300px!important] right-[420px!important]'} h-36 w-48 absolute bottom-2 right-[455px] transition-all`}>
                     <div className="flex flex-wrap h-full w-full ">
-                        {multiple && ImageArr.map((val, i) => (
+                        {/* {multiple && ImageArr.map((val, i) => (
                             <div key={i} className="h-[50%] w-[50%] hidden">
                                 <img src={val} className="h-full w-full object-contain" />
                             </div>
-                        ))}
+                        ))} */}
                     </div>
                 </div>
             </div>
@@ -162,16 +165,16 @@ const Hero = () => {
                 <div className='w-[100%] flex gap-10 justify-center items-start'>
                     {condition && (
                         <div className={`flex justify-center cursor-pointer items-center flex-col w-[120px]`}>
-                            <div className={`rounded-full bg-[#d3dfe0] hover:bg-[#03E2E1] transition-colors duration-1000 relative p-3 w-[120px] h-[120px] mainDiv`} onClick={() => {
-                                toggleConditon('/contact.png', setCondition);
+                            <div onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} className={`rounded-full relative ${!isHovered ? "bgGlass p-3" : "bg-transparent p-0"} w-[120px] h-[120px] mainDiv`} onClick={() => {
+                                toggleConditon('/contactActive.png', setCondition);
                                 if (ImageArr.length !== 5) {
                                     setCondition(false)
                                     return
                                 }
                             }} >
-                                <img src="/contactRotate.png" className="absolute object-contain top-[2] left-[2] rotateImg h-24 w-24" />
+                                <img alt="contact" src={!isHovered ? "/contactRotate.png" : "/contactRotateHover.png"} className={`absolute object-contain rotateImg ${!isHovered ? "w-24 h-24 top-[2] left-[2]" : "w-36 h-36 top-0 left-0"} `} />
 
-                                <Image width={90} height={90} src={'/contact.png'} className="rounded-full contactIn w-16 h-16 rotateImg" />
+                                <Image alt="contact" width={92} height={92} src={!isHovered ? '/contact.png' : "/contactHover.png"} className={`rounded-full ${!isHovered ? "w-16 h-16 contactIn" : "w-32 h-w-32 absolute top-[12%] left-[1%]"} `} />
                             </div>
                             <p className="text-center">Contact Management</p>
                         </div>
@@ -179,42 +182,42 @@ const Hero = () => {
                     )}
                     {condition1 && (
                         <div className={`flex justify-center cursor-pointer items-center flex-col w-[120px] `}>
-                            <div className='rounded-full bg-[#d3dfe0] w-[120px] h-[120px] flex items-center justify-center hover:bg-[#03E2E1] transition-colors duration-1000 overflow-hidden'>
-                                <Image src={'/omni.png'} width={90} height={90} className="w-[94px] w-24 h-24  hover:scale-125 transition-all duration-500 object-contain" onClick={() => {
-                                    toggleConditon('/omni.png', setCondition1);
-                                    if (ImageArr.length !== 5) {
-                                        setCondition1(false)
-                                        return
-                                    }
-                                }} />
+                            <div onMouseEnter={() => setIsHovered1(true)} onMouseLeave={() => setIsHovered1(false)} className={`rounded-full ${!isHovered1 ? "bgGlass" : "bg-transparent"}  w-[120px] h-[120px] flex items-center justify-center overflow-hidden`} onClick={() => {
+                                toggleConditon('/omniActive.png', setCondition1);
+                                if (ImageArr.length !== 5) {
+                                    setCondition1(false)
+                                    return
+                                }
+                            }}>
+                                <Image alt="omni" src={!isHovered1 ? '/omni.png' : "/omniHover.png"} width={90} height={90} className={` hover:scale-125 transition-all ${!isHovered1 ? "w-24 h-24" : "w-[100px] h-[100px]"} duration-500 object-contain`} />
                             </div>
                             <p className="text-center">Omni-Channel AdManagement</p>
                         </div>
                     )}
                     {condition2 && (
                         <div className="flex justify-center cursor-pointer items-center flex-col w-[120px]">
-                            <div className='rounded-full bg-[#d3dfe0] w-[120px] h-[120px] flex items-center justify-center hover:bg-[#03E2E1] transition-colors duration-1000 overflow-hidden'>
-                                <Image src={'/scheduling.png'} width={90} height={90} className="w-[94px] w-24 h-24  hover:scale-125 transition-all duration-500 object-contain" onClick={() => {
-                                    toggleConditon('/scheduling.png', setCondition2);
-                                    if (ImageArr.length !== 5) {
-                                        setCondition2(false)
-                                        return
-                                    }
-                                }} />
+                            <div onMouseEnter={() => setIsHovered2(true)} onMouseLeave={() => setIsHovered2(false)} className={`rounded-full ${!isHovered2 ? "bgGlass" : "bg-transparent"} w-[120px] h-[120px] flex items-center justify-center overflow-hidden`} onClick={() => {
+                                toggleConditon('/schedulingActive.png', setCondition2);
+                                if (ImageArr.length !== 5) {
+                                    setCondition2(false)
+                                    return
+                                }
+                            }} >
+                                <Image alt="scheduling" src={!isHovered2 ? '/scheduling.png' : "/schedulingHover.png"} width={90} height={90} className={` hover:scale-125 transition-all ${!isHovered2 ? "w-24 h-24" : "w-[100px] h-[100px]"} duration-500 object-contain`} />
                             </div>
                             <p className="text-center">e-Scheduling & Custom Links</p>
                         </div>
                     )}
                     {condition3 && (
                         <div className="flex justify-center cursor-pointer items-center flex-col w-[120px]">
-                            <div className='rounded-full bg-[#d3dfe0] w-[120px] h-[120px] flex items-center justify-center hover:bg-[#03E2E1] transition-colors duration-1000 overflow-hidden'>
-                                <Image src={'/chatbots.png'} width={90} height={90} className="w-[94px] w-24 h-24  hover:scale-125 transition-all duration-500 object-contain" onClick={() => {
-                                    toggleConditon('/chatbots.png', setCondition3);
-                                    if (ImageArr.length !== 5) {
-                                        setCondition3(false)
-                                        return
-                                    }
-                                }} />
+                            <div onMouseEnter={() => setIsHovered3(true)} onMouseLeave={() => setIsHovered3(false)} className={`rounded-full ${!isHovered3 ? "bgGlass" : "bg-transparent"} w-[120px] h-[120px] flex items-center justify-center overflow-hidden`} onClick={() => {
+                                toggleConditon('/chatbotsActive.png', setCondition3);
+                                if (ImageArr.length !== 5) {
+                                    setCondition3(false)
+                                    return
+                                }
+                            }} >
+                                <Image alt="chatbots" src={!isHovered3 ? '/chatbots.png' : "/chatbotsHover.png"} width={90} height={90} className={` hover:scale-125 transition-all ${!isHovered3 ? "w-24 h-24" : "w-[100px] h-[100px]"} duration-500 object-contain`} />
                             </div>
 
                             <p className="text-center">Advanced A.I. Chat Bots</p>
@@ -222,57 +225,58 @@ const Hero = () => {
                     )}
                     {condition4 && (
                         <div className="flex justify-center cursor-pointer items-center flex-col w-[120px]">
-                            <div className='rounded-full bg-[#d3dfe0] w-[120px] h-[120px] flex items-center justify-center hover:bg-[#03E2E1] transition-colors duration-1000 overflow-hidden'>
-                                <Image src={'/signature.png'} width={90} height={90} className="w-[94px] w-24 h-24  hover:scale-125 transition-all duration-500 object-contain" onClick={() => {
-                                    toggleConditon('/signature.png', setCondition4);
-                                    if (ImageArr.length !== 5) {
-                                        setCondition4(false)
-                                        return
-                                    }
-                                }} />
+                            <div onMouseEnter={() => setIsHovered4(true)} onMouseLeave={() => setIsHovered4(false)} className={`rounded-full ${!isHovered4 ? "bgGlass" : "bg-transparent"} w-[120px] h-[120px] flex items-center justify-center overflow-hidden`} onClick={() => {
+                                toggleConditon('/signatureActive.png', setCondition4);
+                                if (ImageArr.length !== 5) {
+                                    setCondition4(false)
+                                    return
+                                }
+                            }} >
+                                <Image alt="signature" src={!isHovered4 ? '/signature.png' : "/signatureHover.png"} width={90} height={90} className={` hover:scale-125 transition-all ${!isHovered4 ? "w-24 h-24" : "w-[100px] h-[100px]"} duration-500 object-contain`} />
                             </div>
                             <p className="text-center">e-signature & Fillings</p>
                         </div>
                     )}
                     {condition5 && (
                         <div className="flex justify-center cursor-pointer items-center flex-col w-[120px]">
-                            <div className='rounded-full bg-[#d3dfe0] w-[120px] h-[120px] flex items-center justify-center hover:bg-[#03E2E1] transition-colors duration-1000 overflow-hidden'>
-                                <Image src={'/secure.png'} width={90} height={90} className="w-[94px] w-24 h-24  hover:scale-125 transition-all duration-500 object-contain" onClick={() => {
-                                    toggleConditon('/secure.png', setCondition5);
-                                    if (ImageArr.length !== 5) {
-                                        setCondition5(false)
-                                        return
-                                    }
-                                }} />
+                            <div onMouseEnter={() => setIsHovered5(true)} onMouseLeave={() => setIsHovered5(false)} className={`rounded-full ${!isHovered5 ? "bgGlass" : "bg-transparent"} w-[120px] h-[120px] flex items-center justify-center overflow-hidden`} onClick={() => {
+                                toggleConditon('/secureActive.png', setCondition5);
+                                if (ImageArr.length !== 5) {
+                                    setCondition5(false)
+                                    return
+                                }
+                            }} >
+                                <Image alt="secure" src={!isHovered5 ? '/secure.png' : "/secureHover.png"} width={90} height={90} className={` hover:scale-125 transition-all ${!isHovered5 ? "w-24 h-24" : "w-[100px] h-[100px]"} duration-500 object-contain`} />
                             </div>
                             <p className="text-center">Secure Payment Links</p>
                         </div>
                     )}
                     {condition6 && (
                         <div className="flex justify-center cursor-pointer items-center flex-col w-[120px]">
-                            <div className='rounded-full bg-[#d3dfe0] w-[120px] h-[120px] flex items-center justify-center hover:bg-[#03E2E1] transition-colors duration-1000 overflow-hidden'>
-                                <Image src={'/learning.png'} width={90} height={90} className="w-[94px] w-24 h-24  hover:scale-125 transition-all duration-500 object-contain" onClick={() => {
-                                    toggleConditon('/learning.png', setCondition6);
-                                    if (ImageArr.length !== 5) {
-                                        setCondition6(false)
-                                        return
-                                    }
-                                }} />
+                            <div onMouseEnter={() => setIsHovered6(true)} onMouseLeave={() => setIsHovered6(false)} className={`rounded-full ${!isHovered6 ? "bgGlass" : "bg-transparent"} w-[120px] h-[120px] flex items-center justify-center overflow-hidden`} onClick={() => {
+                                toggleConditon('/learningActive.png', setCondition6);
+                                if (ImageArr.length !== 5) {
+                                    setCondition6(false)
+                                    return
+                                }
+                            }} >
+                                <Image alt="learning" src={!isHovered6 ? '/learning.png' : "/learningHover.png"} width={90} height={90} className={` hover:scale-125 transition-all ${!isHovered6 ? "w-24 h-24" : "w-[100px] h-[100px]"} duration-500 object-contain`} />
                             </div>
                             <p className="text-center">Learning Management Systems</p>
                         </div>
                     )}
                     {condition7 && (
                         <div className="flex justify-center cursor-pointer items-center flex-col w-[120px]">
-                            <div className='rounded-full bg-[#d3dfe0] hover:bg-[#03E2E1] transition-colors duration-1000 relative p-3 w-[120px] h-[120px] mainDiv' onClick={() => {
-                                toggleConditon('/private.png', setCondition7);
+                            <div onMouseEnter={() => setIsHovered7(true)} onMouseLeave={() => setIsHovered7(false)} className={`rounded-full relative ${!isHovered7 ? "bgGlass p-3" : "bg-transparent p-0"} w-[120px] h-[120px] mainDiv`} onClick={() => {
+                                toggleConditon('/privateActive.png', setCondition7);
                                 if (ImageArr.length !== 5) {
                                     setCondition7(false)
                                     return
                                 }
                             }} >
-                                <img src="/privateRotate.png" className="absolute object-contain top-[2] left-[2] rotateImg h-24 w-24" />
-                                <Image src={'/private.png'} width={90} height={90} className="w-[94px] p-2 hover:scale-150 transition-all duration-200" />
+                                <img alt="private" src={!isHovered7 ? "/privateRotate.png" : "/privateRotateHover.png"} className={`absolute object-contain rotateImg ${!isHovered7 ? "w-24 h-24 top-[2] left-[2]" : "w-36 h-36 top-0 left-0"} `} />
+
+                                <Image alt="private" width={92} height={92} src={!isHovered7 ? '/private.png' : "/privateHover.png"} className={`rounded-full ${!isHovered7 ? "w-16 h-16 contactIn" : "w-32 h-w-32 absolute top-[12%] left-[1%]"} `} />
                             </div>
                             <p className="text-center">Private Communities</p>
                         </div>
@@ -282,7 +286,7 @@ const Hero = () => {
                 <h3 className="mt-2 font-semibold">14 Day Free Trial Plans Starting at $97/Months</h3>
             </div>
 
-        </section>
+        </section >
     );
 };
 
