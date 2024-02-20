@@ -8,6 +8,7 @@ const Hero = () => {
     const [placeholder1, setPlaceholder1] = useState('')
     const [placeholder2, setPlaceholder2] = useState('')
     const [placeholder3, setPlaceholder3] = useState('')
+    const [placeholder4, setPlaceholder4] = useState('')
     const [condition, setCondition] = useState(true)
     const [condition1, setCondition1] = useState(true)
     const [condition2, setCondition2] = useState(true)
@@ -18,9 +19,11 @@ const Hero = () => {
     const [condition7, setCondition7] = useState(true)
     const [multiple, setMultiple] = useState(false)
     let [ImageArr, setImageArr] = useState([]);
+    const [isHovered, setIsHovered] = useState(false);
 
     const toggleConditon = (src, func) => {
-        if (src !== placeholder && src !== placeholder1 && src !== placeholder2 && src !== placeholder3) {
+        if (src !== placeholder && src !== placeholder1 && src !== placeholder2 && src !== placeholder3 && src !== placeholder4) {
+            console.log(ImageArr);
             if (placeholder === '') {
                 setImageArr([...ImageArr, src])
                 setPlaceholder(src)
@@ -37,14 +40,20 @@ const Hero = () => {
                 setImageArr([...ImageArr, src])
                 setPlaceholder3(src)
                 return
+            } else if (placeholder4 === '') {
+                setImageArr([...ImageArr, src])
+                setPlaceholder4(src)
+                console.log(ImageArr);
+                if (ImageArr.length === 4) setMultiple(true)
+                return
             } else {
-                if (ImageArr.length === 4) {
+                if (ImageArr.length === 5) {
                     setMultiple(true)
                     return
                 }
                 return
             }
-        } else if (placeholder == '' && placeholder1 == '' && placeholder3 == '' && placeholder2 == '') {
+        } else if (placeholder == '' && placeholder1 == '' && placeholder2 == '' && placeholder3 == '' && placeholder4 == '') {
             return
 
         } else {
@@ -86,46 +95,56 @@ const Hero = () => {
                     </div>
                 </div>
                 <Image src={'/ring.png'} className="h-[90%] w-[1100px]" width={1100} height={950} />
-                {!multiple && (
-                    <>
-                        <div className={`bg-[#d3dfe0] glow w-[140px] h-[140px] p-2 ${placeholder !== "" ? "cursor-pointer" : 'cursor-auto'} rounded-full h-36 w-36 absolute bottom-14 left-16 `}>
-                            <div className="flex justify-center items-center w-full h-full">
-                                <img src={placeholder} height={140} width={140} className=" opacity-55" onClick={() => {
-                                    toggleConditon(placeholder);
-                                    setPlaceholder('');
-                                    setImageArr(ImageArr.filter(val => val !== placeholder))
-                                }} />
-                            </div>
+                {/* {!multiple && ( */}
+                <>
+                    <div className={`bg-[#d3dfe0] glow w-[140px] h-[140px] p-2 ${placeholder !== "" ? "cursor-pointer" : 'cursor-auto'} rounded-full h-36 w-36 absolute bottom-14 left-16 `}>
+                        <div className="flex justify-center items-center w-full h-full">
+                            <img src={placeholder} height={140} width={140} className=" opacity-55" onClick={() => {
+                                toggleConditon(placeholder);
+                                setPlaceholder('');
+                                setImageArr(ImageArr.filter(val => val !== placeholder))
+                            }} />
                         </div>
-                        <div className={`bg-[#d3dfe0] w-[140px] h-[140px] p-2 ${placeholder1 !== "" ? "cursor-pointer" : 'cursor-auto'} rounded-full h-36 w-36 absolute bottom-4 left-52`}>
-                            <div className="flex justify-center items-center w-full h-full">
-                                <img src={placeholder1} height={140} width={140} className=" opacity-55" onClick={() => {
-                                    toggleConditon(placeholder1);
-                                    setPlaceholder1('');
-                                    setImageArr(ImageArr.filter(val => val !== placeholder1))
-                                }} />
-                            </div>
+                    </div>
+                    <div className={`bg-[#d3dfe0] w-[140px] h-[140px] p-2 ${placeholder1 !== "" ? "cursor-pointer" : 'cursor-auto'} rounded-full h-36 w-36 absolute bottom-4 left-52`}>
+                        <div className="flex justify-center items-center w-full h-full">
+                            <img src={placeholder1} height={140} width={140} className=" opacity-55" onClick={() => {
+                                toggleConditon(placeholder1);
+                                setPlaceholder1('');
+                                setImageArr(ImageArr.filter(val => val !== placeholder1))
+                            }} />
                         </div>
-                        <div className={`bg-[#d3dfe0] w-[140px] h-[140px] p-2 ${placeholder2 !== "" ? "cursor-pointer" : 'cursor-auto'} rounded-full h-36 w-36 absolute bottom-14 right-24`}>
-                            <div className="flex justify-center items-center w-full h-full">
-                                <img src={placeholder2} height={140} width={140} className=" opacity-55" onClick={() => {
-                                    toggleConditon(placeholder2);
-                                    setPlaceholder2('');
-                                    setImageArr(ImageArr.filter(val => val !== placeholder2))
-                                }} />
-                            </div>
+                    </div>
+                    <div className={`bg-[#d3dfe0] w-[140px] h-[140px] p-2 ${placeholder2 !== "" ? "cursor-pointer" : 'cursor-auto'} rounded-full h-36 w-36 absolute bottom-14 right-24`}>
+                        <div className="flex justify-center items-center w-full h-full">
+                            <img src={placeholder2} height={140} width={140} className=" opacity-55" onClick={() => {
+                                toggleConditon(placeholder2);
+                                setPlaceholder2('');
+                                setImageArr(ImageArr.filter(val => val !== placeholder2))
+                            }} />
                         </div>
-                        <div className={`bg-[#d3dfe0] w-[140px] h-[140px] p-2 ${placeholder3 !== "" ? "cursor-pointer" : 'cursor-auto'} rounded-full h-36 w-36 absolute bottom-3 right-64`}>
-                            <div className="flex justify-center items-center w-full h-full">
-                                <img src={placeholder3} height={140} width={140} className=" opacity-55" onClick={() => {
-                                    toggleConditon(placeholder3);
-                                    setPlaceholder3('');
-                                    setImageArr(ImageArr.filter(val => val !== placeholder3))
-                                }} />
-                            </div>
+                    </div>
+
+                    <div className={`bg-[#d3dfe0] w-[140px] h-[140px] p-2 ${placeholder3 !== "" ? "cursor-pointer" : 'cursor-auto'} rounded-full h-36 w-36 absolute bottom-3 right-64`}>
+                        <div className="flex justify-center items-center w-full h-full">
+                            <img src={placeholder3} height={140} width={140} className=" opacity-55" onClick={() => {
+                                toggleConditon(placeholder3);
+                                setPlaceholder3('');
+                                setImageArr(ImageArr.filter(val => val !== placeholder3))
+                            }} />
                         </div>
-                    </>
-                )}
+                    </div>
+                    <div className={`bg-[#d3dfe0] w-[140px] h-[140px] p-2 ${placeholder4 !== "" ? "cursor-pointer" : 'cursor-auto'} rounded-full h-36 w-36 absolute bottom-3 right-0 hidden`}>
+                        <div className="flex justify-center items-center w-full h-full">
+                            <img src={placeholder4} height={140} width={140} className=" opacity-55" onClick={() => {
+                                toggleConditon(placeholder4);
+                                setPlaceholder4('');
+                                setImageArr(ImageArr.filter(val => val !== placeholder4))
+                            }} />
+                        </div>
+                    </div>
+                </>
+                {/* {)}} */}
                 {console.log(multiple)}
                 <div className={`bgBanner bg-[#d3dfe0] rounded ${multiple && 'h-36 w-[300px!important] right-[420px!important]'} h-36 w-48 absolute bottom-2 right-[455px] transition-all`}>
                     <div className="flex flex-wrap h-full w-full ">
@@ -142,25 +161,28 @@ const Hero = () => {
                 <h1 className="text-2xl font-semibold">How would you like to grow your business?</h1>
                 <div className='w-[100%] flex gap-10 justify-center items-start'>
                     {condition && (
-                        <div className={`flex justify-center cursor-pointer items-center flex-col w-[120px] `}>
-                            <div className='rounded-full bg-[#d3dfe0] glow1 transition-all duration-200'>
-                                <Image width={90} height={90} src={'/contact.png'} className="w-[94px] p-2  transition-all duration-200" onClick={() => {
-                                    toggleConditon('/contact.png', setCondition);
-                                    if (ImageArr.length !== 4) {
-                                        setCondition(false)
-                                        return
-                                    }
-                                }} />
+                        <div className={`flex justify-center cursor-pointer items-center flex-col w-[120px]`}>
+                            <div className={`rounded-full bg-[#d3dfe0] hover:bg-[#03E2E1] transition-colors duration-1000 relative p-3 w-[120px] h-[120px] mainDiv`} onClick={() => {
+                                toggleConditon('/contact.png', setCondition);
+                                if (ImageArr.length !== 5) {
+                                    setCondition(false)
+                                    return
+                                }
+                            }} >
+                                <img src="/contactRotate.png" className="absolute object-contain top-[2] left-[2] rotateImg h-24 w-24" />
+
+                                <Image width={90} height={90} src={'/contact.png'} className="rounded-full contactIn w-16 h-16 rotateImg" />
                             </div>
                             <p className="text-center">Contact Management</p>
                         </div>
+
                     )}
                     {condition1 && (
                         <div className={`flex justify-center cursor-pointer items-center flex-col w-[120px] `}>
-                            <div className='rounded-full bg-[#d3dfe0] glow1 transition-all duration-200'>
-                                <Image src={'/omni.png'} width={90} height={90} className="w-[94px] p-2  transition-all duration-200" onClick={() => {
+                            <div className='rounded-full bg-[#d3dfe0] w-[120px] h-[120px] flex items-center justify-center hover:bg-[#03E2E1] transition-colors duration-1000 overflow-hidden'>
+                                <Image src={'/omni.png'} width={90} height={90} className="w-[94px] w-24 h-24  hover:scale-125 transition-all duration-500 object-contain" onClick={() => {
                                     toggleConditon('/omni.png', setCondition1);
-                                    if (ImageArr.length !== 4) {
+                                    if (ImageArr.length !== 5) {
                                         setCondition1(false)
                                         return
                                     }
@@ -171,10 +193,10 @@ const Hero = () => {
                     )}
                     {condition2 && (
                         <div className="flex justify-center cursor-pointer items-center flex-col w-[120px]">
-                            <div className='rounded-full bg-[#d3dfe0] hover:bg-[#03E2E1] transition-all duration-200'>
-                                <Image src={'/scheduling.png'} width={90} height={90} className="w-[94px] p-2 hover:scale-150 transition-all duration-200" onClick={() => {
+                            <div className='rounded-full bg-[#d3dfe0] w-[120px] h-[120px] flex items-center justify-center hover:bg-[#03E2E1] transition-colors duration-1000 overflow-hidden'>
+                                <Image src={'/scheduling.png'} width={90} height={90} className="w-[94px] w-24 h-24  hover:scale-125 transition-all duration-500 object-contain" onClick={() => {
                                     toggleConditon('/scheduling.png', setCondition2);
-                                    if (ImageArr.length !== 4) {
+                                    if (ImageArr.length !== 5) {
                                         setCondition2(false)
                                         return
                                     }
@@ -185,10 +207,10 @@ const Hero = () => {
                     )}
                     {condition3 && (
                         <div className="flex justify-center cursor-pointer items-center flex-col w-[120px]">
-                            <div className='rounded-full bg-[#d3dfe0] hover:bg-[#03E2E1] transition-all duration-200'>
-                                <Image src={'/chatbots.png'} width={90} height={90} className="w-[94px] p-2 hover:scale-150 transition-all duration-200" onClick={() => {
+                            <div className='rounded-full bg-[#d3dfe0] w-[120px] h-[120px] flex items-center justify-center hover:bg-[#03E2E1] transition-colors duration-1000 overflow-hidden'>
+                                <Image src={'/chatbots.png'} width={90} height={90} className="w-[94px] w-24 h-24  hover:scale-125 transition-all duration-500 object-contain" onClick={() => {
                                     toggleConditon('/chatbots.png', setCondition3);
-                                    if (ImageArr.length !== 4) {
+                                    if (ImageArr.length !== 5) {
                                         setCondition3(false)
                                         return
                                     }
@@ -200,10 +222,10 @@ const Hero = () => {
                     )}
                     {condition4 && (
                         <div className="flex justify-center cursor-pointer items-center flex-col w-[120px]">
-                            <div className='rounded-full bg-[#d3dfe0] hover:bg-[#03E2E1] transition-all duration-200'>
-                                <Image src={'/signature.png'} width={90} height={90} className="w-[94px] p-2 hover:scale-150 transition-all duration-200" onClick={() => {
+                            <div className='rounded-full bg-[#d3dfe0] w-[120px] h-[120px] flex items-center justify-center hover:bg-[#03E2E1] transition-colors duration-1000 overflow-hidden'>
+                                <Image src={'/signature.png'} width={90} height={90} className="w-[94px] w-24 h-24  hover:scale-125 transition-all duration-500 object-contain" onClick={() => {
                                     toggleConditon('/signature.png', setCondition4);
-                                    if (ImageArr.length !== 4) {
+                                    if (ImageArr.length !== 5) {
                                         setCondition4(false)
                                         return
                                     }
@@ -214,10 +236,10 @@ const Hero = () => {
                     )}
                     {condition5 && (
                         <div className="flex justify-center cursor-pointer items-center flex-col w-[120px]">
-                            <div className='rounded-full bg-[#d3dfe0] hover:bg-[#03E2E1] transition-all duration-200'>
-                                <Image src={'/secure.png'} width={90} height={90} className="w-[94px] p-2 hover:scale-150 transition-all duration-200" onClick={() => {
+                            <div className='rounded-full bg-[#d3dfe0] w-[120px] h-[120px] flex items-center justify-center hover:bg-[#03E2E1] transition-colors duration-1000 overflow-hidden'>
+                                <Image src={'/secure.png'} width={90} height={90} className="w-[94px] w-24 h-24  hover:scale-125 transition-all duration-500 object-contain" onClick={() => {
                                     toggleConditon('/secure.png', setCondition5);
-                                    if (ImageArr.length !== 4) {
+                                    if (ImageArr.length !== 5) {
                                         setCondition5(false)
                                         return
                                     }
@@ -228,10 +250,10 @@ const Hero = () => {
                     )}
                     {condition6 && (
                         <div className="flex justify-center cursor-pointer items-center flex-col w-[120px]">
-                            <div className='rounded-full bg-[#d3dfe0] hover:bg-[#03E2E1] transition-all duration-200'>
-                                <Image src={'/learning.png'} width={90} height={90} className="w-[94px] p-2 hover:scale-150 transition-all duration-200" onClick={() => {
+                            <div className='rounded-full bg-[#d3dfe0] w-[120px] h-[120px] flex items-center justify-center hover:bg-[#03E2E1] transition-colors duration-1000 overflow-hidden'>
+                                <Image src={'/learning.png'} width={90} height={90} className="w-[94px] w-24 h-24  hover:scale-125 transition-all duration-500 object-contain" onClick={() => {
                                     toggleConditon('/learning.png', setCondition6);
-                                    if (ImageArr.length !== 4) {
+                                    if (ImageArr.length !== 5) {
                                         setCondition6(false)
                                         return
                                     }
@@ -242,14 +264,15 @@ const Hero = () => {
                     )}
                     {condition7 && (
                         <div className="flex justify-center cursor-pointer items-center flex-col w-[120px]">
-                            <div className='rounded-full bg-[#d3dfe0] hover:bg-[#03E2E1] transition-all duration-200'>
-                                <Image src={'/private.png'} width={90} height={90} className="w-[94px] p-2 hover:scale-150 transition-all duration-200" onClick={() => {
-                                    toggleConditon('/private.png', setCondition7);
-                                    if (ImageArr.length !== 4) {
-                                        setCondition7(false)
-                                        return
-                                    }
-                                }} />
+                            <div className='rounded-full bg-[#d3dfe0] hover:bg-[#03E2E1] transition-colors duration-1000 relative p-3 w-[120px] h-[120px] mainDiv' onClick={() => {
+                                toggleConditon('/private.png', setCondition7);
+                                if (ImageArr.length !== 5) {
+                                    setCondition7(false)
+                                    return
+                                }
+                            }} >
+                                <img src="/privateRotate.png" className="absolute object-contain top-[2] left-[2] rotateImg h-24 w-24" />
+                                <Image src={'/private.png'} width={90} height={90} className="w-[94px] p-2 hover:scale-150 transition-all duration-200" />
                             </div>
                             <p className="text-center">Private Communities</p>
                         </div>

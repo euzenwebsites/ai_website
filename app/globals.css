@@ -10,14 +10,46 @@
     opacity: 0.9;
 }
 
-.glow {
-    background-color: #03E2E1;
-}
+/* .glow1 {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} */
+/* z-index: -1; */
+/* object-fit: contain; */
+/* background-color: aqua; */
+
+/* .glow1:hover{
+    box-shadow: inset  2px 2px 20px rgba(0, 204, 255, 0.2);
+} */
 
 .glow1:hover {
-    box-shadow: 0 0 5px #03E2E1,
-        0 0 25px #03E2E1,
+    box-shadow: 50px 50px 100px #059ae0,
         0 0 50px #03E2E1,
-        0 0 100px #03E2E1;
-        background-color: #03E2E1;
+        0 0 50px #03E2E1,
+        0 0 50px #03E2E1;
+
+}
+
+.mainDiv:hover .rotateImg{
+    animation: rotate 5s linear infinite !important;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.contactIn{
+    position: absolute;
+    top: 24% !important;
+    left: 24%;
 }
