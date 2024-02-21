@@ -92,36 +92,36 @@ const Hero = () => {
     return (
         <section className="flex flex-col items-center px-9 z-0 mt-24 ">
             <div className="relative">
-                <div className="h-56 w-[970px] absolute bottom-[135px] right-[61px]">
+                <div className="h-56 w-[970px] absolute bottom-[140px] right-[70px]">
                     <div className="flex justify-center items-center h-full w-full flex-col">
                         <h1 className="text-black text-5xl font-bold text-center"> <span className="text-[#03E2E1]">Every</span> <span className="font-normal">Tool </span>your business <span className="text-[#03E2E1]">Needs</span>,  </h1>
                         <h1 className="text-[#03E2E1] pt-3 text-6xl font-bold text-center">In-One-Place<span className="text-[black!important]">...</span> </h1>
                     </div>
                 </div>
-                <Image src={'/ring1.png'} alt="ring" className="h-[90%] w-[1100px]" width={1100} height={950} />
+                <Image src={'/ring.png'} alt="ring" width={1160} height={950} />
                 {/* {!multiple && ( */}
                 <>
-                    <div className={`w-[140px] h-[140px] p-2 ${placeholder !== "" ? "cursor-pointer bg-transparent" : 'cursor-auto'} rounded-full h-36 w-36 absolute bottom-14 left-16 bgGlass`}>
+                    <div className={`w-[140px] h-[140px] p-2 ${placeholder !== "" ? "cursor-pointer bg-transparent" : 'cursor-auto'} rounded-full h-36 w-36 absolute bottom-20 left-28 bgGlass`}>
                         <div className="flex justify-center items-center w-full h-full">
-                            {placeholder ? (<img alt={placeholder} src={placeholder} height={140} width={140} onClick={() => {
+                            {placeholder ? (<Image alt={placeholder} src={placeholder} height={140} width={140} onClick={() => {
                                 toggleConditon(placeholder);
                                 setPlaceholder('');
                                 setImageArr(ImageArr.filter(val => val !== placeholder))
                             }} />) : (<p></p>)}
                         </div>
                     </div>
-                    <div className={`w-[140px] h-[140px] p-2 ${placeholder1 !== "" ? "cursor-pointer bg-transparent" : 'cursor-auto'} rounded-full h-36 w-36 absolute bottom-4 left-56 bgGlass `}>
+                    <div className={`w-[140px] h-[140px] p-2 ${placeholder1 !== "" ? "cursor-pointer bg-transparent" : 'cursor-auto'} rounded-full h-36 w-36 absolute bottom-8 left-64 bgGlass `}>
                         <div className="flex justify-center items-center w-full h-full">
-                            {placeholder1 && <img alt={placeholder1} src={placeholder1} height={140} width={140} onClick={() => {
+                            {placeholder1 && <Image alt={placeholder1} src={placeholder1} height={140} width={140} onClick={() => {
                                 toggleConditon(placeholder1);
                                 setPlaceholder1('');
                                 setImageArr(ImageArr.filter(val => val !== placeholder1))
                             }} />}
                         </div>
                     </div>
-                    <div className={`w-[140px] h-[140px] p-2 ${placeholder2 !== "" ? "cursor-pointer bg-transparent" : 'cursor-auto'} rounded-full h-36 w-36 absolute bottom-14 right-24 bgGlass`}>
+                    <div className={`w-[140px] h-[140px] p-2 ${placeholder2 !== "" ? "cursor-pointer bg-transparent" : 'cursor-auto'} rounded-full h-36 w-36 absolute bottom-20 right-24 bgGlass`}>
                         <div className="flex justify-center items-center w-full h-full">
-                            {placeholder2 && <img alt={placeholder2} src={placeholder2} height={140} width={140} onClick={() => {
+                            {placeholder2 && <Image alt={placeholder2} src={placeholder2} height={140} width={140} onClick={() => {
                                 toggleConditon(placeholder2);
                                 setPlaceholder2('');
                                 setImageArr(ImageArr.filter(val => val !== placeholder2))
@@ -129,9 +129,9 @@ const Hero = () => {
                         </div>
                     </div>
 
-                    <div className={`w-[140px] h-[140px] p-2 ${placeholder3 !== "" ? "cursor-pointer bg-transparent" : 'cursor-auto'} rounded-full h-36 w-36 absolute bottom-3 right-64 bgGlass`}>
+                    <div className={`w-[140px] h-[140px] p-2 ${placeholder3 !== "" ? "cursor-pointer bg-transparent" : 'cursor-auto'} rounded-full h-36 w-36 absolute bottom-8 right-64 bgGlass`}>
                         <div className="flex justify-center items-center w-full h-full">
-                            {placeholder3 && <img alt={placeholder3} src={placeholder3} height={140} width={140} onClick={() => {
+                            {placeholder3 && <Image alt={placeholder3} src={placeholder3} height={140} width={140} onClick={() => {
                                 toggleConditon(placeholder3);
                                 setPlaceholder3('');
                                 setImageArr(ImageArr.filter(val => val !== placeholder3))
@@ -140,7 +140,7 @@ const Hero = () => {
                     </div>
                     <div className={`w-[140px] h-[140px] p-2 ${placeholder4 !== "" ? "cursor-pointer bg-transparent" : 'cursor-auto'} rounded-full h-36 w-36 absolute bottom-3 right-0 hidden bgGlass`}>
                         <div className="flex justify-center items-center w-full h-full">
-                            {placeholder4 && <img alt={placeholder4} src={placeholder4} height={140} width={140} onClick={() => {
+                            {placeholder4 && <Image alt={placeholder4} src={placeholder4} height={140} width={140} onClick={() => {
                                 toggleConditon(placeholder4);
                                 setPlaceholder4('');
                                 setImageArr(ImageArr.filter(val => val !== placeholder4))
@@ -149,14 +149,14 @@ const Hero = () => {
                     </div>
                 </>
                 {/* {)}} */}
-                <div className={`bgBanner bg-[#d3dfe0] rounded ${multiple && 'h-36 w-[300px!important] right-[420px!important]'} h-36 w-48 absolute bottom-2 right-[455px] transition-all`}>
-                    <div className="flex flex-wrap h-full w-full ">
-                        {/* {multiple && ImageArr.map((val, i) => (
+                <div className={`bgBanner bg-[#d3dfe0] rounded ${multiple && 'h-36 w-[300px!important] right-[420px!important]'} h-36 w-72 absolute bottom-8 right-[442px] transition-all`}>
+                    {/* {multiple && ImageArr.map((val, i) => (
                             <div key={i} className="h-[50%] w-[50%] hidden">
                                 <img src={val} className="h-full w-full object-contain" />
                             </div>
                         ))} */}
-                    </div>
+                    {/* <div className="flex flex-wrap h-full w-full ">
+                    </div> */}
                 </div>
             </div>
 
@@ -173,9 +173,11 @@ const Hero = () => {
                             }
                         }} >
                             {condition ? (<>
-                                <img src="/contact1.png" className={` ${isHovered && "w-36 object-contain h-36 scale-125 absolute top-[0] left-[0]   z-0"}`} />
-                                {isHovered && <img src="/glowLens.png" alt="glow" className={`object-contain w-32 h-32 absolute top-[0] left-[0] z-50 rotateImg ${isHovered && "z-50"}`} />}
-                            </>) : (<img alt="contact" src='/contactSelected.png' />)}
+                                <Image src="/contact1.png" width={80} height={80} className={`w-20 object-contain h-36 absolute z-0 ${isHovered && 'scale-150'}`} alt="contact" />
+                                {isHovered &&
+                                    <Image src="/glowLens.png" alt="glow" width={128} height={128} className={`object-contain w-32 h-32 absolute top-[0] left-[0] z-50 rotateImg ${isHovered && "z-50"}`} />
+                                }
+                            </>) : (<Image width={120} height={120} alt="contact" src='/contactSelected.png' />)}
                         </div>
                         <p className="text-center">Contact Management</p>
                     </div>
@@ -189,9 +191,9 @@ const Hero = () => {
                             }
                         }}>
                             {condition1 ? (<>
-                                <img src="/omni.png" className={` ${isHovered1 && "w-36 object-contain h-36 scale-125 absolute top-[0] left-[0]   z-0"}`} />
-                                {isHovered1 && <img src="/glowLens.png" alt="glow" className={`object-contain w-32 h-32 absolute top-[0] left-[0] z-50 rotateImg ${isHovered1 && "z-50"}`} />}
-                            </>) : (<img alt="omni" src='/omniSelected.png' />)}
+                                <Image src="/omni.png" width={80} height={80} className={`w-20 object-contain h-36 absolute z-0 ${isHovered1 && 'scale-150'}`} alt="contact" />
+                                {isHovered1 && <Image width={128} height={128} src="/glowLens.png" alt="glow" className={`object-contain w-32 h-32 absolute top-[0] left-[0] z-50 rotateImg ${isHovered1 && "z-50"}`} />}
+                            </>) : (<Image width={120} height={120} alt="omni" src='/omniSelected.png' />)}
                         </div>
                         <p className="text-center">Omni-Channel AdManagement</p>
                     </div>
@@ -205,9 +207,9 @@ const Hero = () => {
                             }
                         }} >
                             {condition2 ? (<>
-                                <img src="/scheduling.png" className={` ${isHovered2 && "w-36 object-contain h-36 scale-125 absolute top-[0] left-[0]   z-0"}`} />
-                                {isHovered2 && <img src="/glowLens.png" alt="glow" className={`object-contain w-32 h-32 absolute top-[0] left-[0] z-50 rotateImg ${isHovered2 && "z-50"}`} />}
-                            </>) : (<img alt="omni" src='/schedulingSelected.png' />)}
+                                <Image src="/scheduling.png" width={80} height={80} className={`w-20 object-contain h-36 absolute z-0 ${isHovered2 && 'scale-125'}`} alt="scheduling" />
+                                {isHovered2 && <Image src="/glowLens.png" width={128} height={128} alt="glow" className={`object-contain w-32 h-32 absolute top-[0] left-[0] z-50 rotateImg ${isHovered2 && "z-50"}`} />}
+                            </>) : (<Image width={120} height={120} alt="scheduling" src='/schedulingSelected.png' />)}
                         </div>
                         <p className="text-center">e-Scheduling & Custom Links</p>
                     </div>
@@ -221,9 +223,9 @@ const Hero = () => {
                             }
                         }} >
                             {condition3 ? (<>
-                                <img src="/chatbots.png" className={` ${isHovered3 && "w-36 object-contain h-36 scale-125 absolute top-[0] left-[0]   z-0"}`} />
-                                {isHovered3 && <img src="/glowLens.png" alt="glow" className={`object-contain w-32 h-32 absolute top-[0] left-[0] z-50 rotateImg ${isHovered3 && "z-50"}`} />}
-                            </>) : (<img alt="omni" src='/chatbotsSelected.png' />)}
+                                <Image src="/chatbots.png" width={80} height={80} className={`w-20 object-contain h-36 absolute z-0 ${isHovered3 && 'scale-150'}`} alt="chatbots" />
+                                {isHovered3 && <Image src="/glowLens.png" alt="glow" width={128} height={128} className={`object-contain w-32 h-32 absolute top-[0] left-[0] z-50 rotateImg ${isHovered3 && "z-50"}`} />}
+                            </>) : (<Image width={120} height={120} alt="chatbots" src='/chatbotsSelected.png' />)}
                         </div>
 
                         <p className="text-center">Advanced A.I. Chat Bots</p>
@@ -238,9 +240,9 @@ const Hero = () => {
                             }
                         }} >
                             {condition4 ? (<>
-                                <img src="/signature.png" className={` ${isHovered4 && "w-36 object-contain h-36 scale-125 absolute top-[0] left-[0]   z-0"}`} />
-                                {isHovered4 && <img src="/glowLens.png" alt="glow" className={`object-contain w-32 h-32 absolute top-[0] left-[0] z-50 rotateImg ${isHovered4 && "z-50"}`} />}
-                            </>) : (<img alt="omni" src='/signatureSelected.png' />)}
+                                <Image src="/signature.png" width={80} height={80} className={`w-20 object-contain h-36 absolute z-0 ${isHovered4 && 'scale-150'}`} alt="signature" />
+                                {isHovered4 && <Image src="/glowLens.png" alt="glow" width={128} height={128} className={`object-contain w-32 h-32 absolute top-[0] left-[0] z-50 rotateImg ${isHovered4 && "z-50"}`} />}
+                            </>) : (<Image width={120} height={120} alt="signature" src='/signatureSelected.png' />)}
                         </div>
                         <p className="text-center">e-signature & Fillings</p>
                     </div>
@@ -254,9 +256,9 @@ const Hero = () => {
                             }
                         }} >
                             {condition5 ? (<>
-                                <img src="/secure.png" className={` ${isHovered5 && "w-36 object-contain h-36 scale-125 absolute top-[0] left-[0]   z-0"}`} />
-                                {isHovered5 && <img src="/glowLens.png" alt="glow" className={`object-contain w-32 h-32 absolute top-[0] left-[0] z-50 rotateImg ${isHovered5 && "z-50"}`} />}
-                            </>) : (<img alt="omni" src='/secureSelected.png' />)}
+                                <Image src="/secure.png" width={80} height={80} className={`w-20 object-contain h-36 absolute z-0 ${isHovered5 && 'scale-150'}`} alt="secure" />
+                                {isHovered5 && <Image src="/glowLens.png" alt="glow" width={128} height={128} className={`object-contain w-32 h-32 absolute top-[0] left-[0] z-50 rotateImg ${isHovered5 && "z-50"}`} />}
+                            </>) : (<Image width={120} height={120} alt="secure" src='/secureSelected.png' />)}
                         </div>
                         <p className="text-center">Secure Payment Links</p>
                     </div>
@@ -270,9 +272,9 @@ const Hero = () => {
                             }
                         }} >
                             {condition6 ? (<>
-                                <img src="/learning.png" className={` ${isHovered6 && "w-36 object-contain h-36 scale-125 absolute top-[0] left-[0]   z-0"}`} />
-                                {isHovered6 && <img src="/glowLens.png" alt="glow" className={`object-contain w-32 h-32 absolute top-[0] left-[0] z-50 rotateImg ${isHovered6 && "z-50"}`} />}
-                            </>) : (<img alt="learning" src='/learningSelected.png' />)}
+                                <Image src="/learning.png" width={80} height={80} className={`w-20 object-contain h-36 absolute z-0 ${isHovered6 && 'scale-150'}`} alt="learning" />
+                                {isHovered6 && <Image src="/glowLens.png" alt="glow" width={128} height={128} className={`object-contain w-32 h-32 absolute top-[0] left-[0] z-50 rotateImg ${isHovered6 && "z-50"}`} />}
+                            </>) : (<Image width={120} height={120} alt="learning" src='/learningSelected.png' />)}
                         </div>
                         <p className="text-center">Learning Management Systems</p>
                     </div>
@@ -286,9 +288,9 @@ const Hero = () => {
                             }
                         }} >
                             {condition7 ? (<>
-                                <img src="/private1.png" className={` ${isHovered7 && "w-36 object-contain h-36 scale-125 absolute top-[0] left-[0]   z-0"}`} />
-                                {isHovered7 && <img src="/glowLens.png" alt="glow" className={`object-contain w-32 h-32 absolute top-[0] left-[0] z-50 rotateImg ${isHovered7 && "z-50"}`} />}
-                            </>) : (<img alt="private" src='/privateSelected.png' />)}
+                                <Image src="/private1.png" width={80} height={80} className={`w-20 object-contain h-36 absolute z-0 ${isHovered7 && 'scale-150'}`} alt="private" />
+                                {isHovered7 && <Image src="/glowLens.png" alt="glow" width={128} height={128} className={`object-contain w-32 h-32 absolute top-[0] left-[0] z-50 rotateImg ${isHovered7 && "z-50"}`} />}
+                            </>) : (<Image width={120} height={120} alt="private" src='/privateSelected.png' />)}
                         </div>
                         <p className="text-center">Private Communities</p>
                     </div>
