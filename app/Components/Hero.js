@@ -1,6 +1,8 @@
 "use client"
 import React, { useState } from "react";
 import Image from "next/image";
+import Video from 'next-video';
+import aiVideo from '../../videos/aiVideo.gif';
 
 const Hero = () => {
     const [placeholder, setPlaceholder] = useState('')
@@ -90,7 +92,7 @@ const Hero = () => {
         }
     }
     return (
-        <section className="flex flex-col items-center px-9 z-0 mt-24 ">
+        <section className="flex flex-col items-center px-9 z-0 mt-20 ">
             <div className="relative">
                 <div className="h-56 w-[970px] absolute bottom-[140px] right-[70px]">
                     <div className="flex justify-center items-center h-full w-full flex-col">
@@ -98,10 +100,10 @@ const Hero = () => {
                         <h1 className="text-[#03E2E1] pt-3 text-6xl font-bold text-center">In-One-Place<span className="text-[black!important]">...</span> </h1>
                     </div>
                 </div>
-                <Image src={'/ring.png'} alt="ring" width={1160} height={950} />
+                <Image src={'/ring.png'} alt="ring" width={1150} height={1010} />
                 {/* {!multiple && ( */}
                 <>
-                    <div className={`w-[140px] h-[140px] p-2 ${placeholder !== "" ? "cursor-pointer bg-transparent" : 'cursor-auto'} rounded-full h-36 w-36 absolute bottom-20 left-28 bgGlass`}>
+                    <div className={`w-[140px] h-[140px] p-2 ${placeholder !== "" ? "cursor-pointer bg-transparent" : 'cursor-auto'} rounded-full h-36 w-36 absolute bottom-16 left-28 bgGlass`}>
                         <div className="flex justify-center items-center w-full h-full">
                             {placeholder ? (<Image alt={placeholder} src={placeholder} height={140} width={140} onClick={() => {
                                 toggleConditon(placeholder);
@@ -110,7 +112,7 @@ const Hero = () => {
                             }} />) : (<p></p>)}
                         </div>
                     </div>
-                    <div className={`w-[140px] h-[140px] p-2 ${placeholder1 !== "" ? "cursor-pointer bg-transparent" : 'cursor-auto'} rounded-full h-36 w-36 absolute bottom-8 left-64 bgGlass `}>
+                    <div className={`w-[140px] h-[140px] p-2 ${placeholder1 !== "" ? "cursor-pointer bg-transparent" : 'cursor-auto'} rounded-full h-36 w-36 absolute bottom-5 left-64 bgGlass `}>
                         <div className="flex justify-center items-center w-full h-full">
                             {placeholder1 && <Image alt={placeholder1} src={placeholder1} height={140} width={140} onClick={() => {
                                 toggleConditon(placeholder1);
@@ -119,7 +121,7 @@ const Hero = () => {
                             }} />}
                         </div>
                     </div>
-                    <div className={`w-[140px] h-[140px] p-2 ${placeholder2 !== "" ? "cursor-pointer bg-transparent" : 'cursor-auto'} rounded-full h-36 w-36 absolute bottom-20 right-24 bgGlass`}>
+                    <div className={`w-[140px] h-[140px] p-2 ${placeholder2 !== "" ? "cursor-pointer bg-transparent" : 'cursor-auto'} rounded-full h-36 w-36 absolute bottom-16 right-24 bgGlass`}>
                         <div className="flex justify-center items-center w-full h-full">
                             {placeholder2 && <Image alt={placeholder2} src={placeholder2} height={140} width={140} onClick={() => {
                                 toggleConditon(placeholder2);
@@ -129,7 +131,7 @@ const Hero = () => {
                         </div>
                     </div>
 
-                    <div className={`w-[140px] h-[140px] p-2 ${placeholder3 !== "" ? "cursor-pointer bg-transparent" : 'cursor-auto'} rounded-full h-36 w-36 absolute bottom-8 right-64 bgGlass`}>
+                    <div className={`w-[140px] h-[140px] p-2 ${placeholder3 !== "" ? "cursor-pointer bg-transparent" : 'cursor-auto'} rounded-full h-36 w-36 absolute bottom-5 right-64 bgGlass`}>
                         <div className="flex justify-center items-center w-full h-full">
                             {placeholder3 && <Image alt={placeholder3} src={placeholder3} height={140} width={140} onClick={() => {
                                 toggleConditon(placeholder3);
@@ -138,7 +140,7 @@ const Hero = () => {
                             }} />}
                         </div>
                     </div>
-                    <div className={`w-[140px] h-[140px] p-2 ${placeholder4 !== "" ? "cursor-pointer bg-transparent" : 'cursor-auto'} rounded-full h-36 w-36 absolute bottom-3 right-0 hidden bgGlass`}>
+                    <div className={`w-[140px] h-[140px] p-2 ${placeholder4 !== "" ? "cursor-pointer bg-transparent" : 'cursor-auto'} rounded-full h-36 w-36 absolute bottom-3 right-[2] hidden bgGlass `}>
                         <div className="flex justify-center items-center w-full h-full">
                             {placeholder4 && <Image alt={placeholder4} src={placeholder4} height={140} width={140} onClick={() => {
                                 toggleConditon(placeholder4);
@@ -149,18 +151,19 @@ const Hero = () => {
                     </div>
                 </>
                 {/* {)}} */}
-                <div className={`bgBanner bg-[#d3dfe0] rounded ${multiple && 'h-36 w-[300px!important] right-[420px!important]'} h-36 w-72 absolute bottom-8 right-[442px] transition-all`}>
-                    {/* {multiple && ImageArr.map((val, i) => (
+                {!multiple ? <img alt="aiBanner" src="/aibanner.png" className={` h-60 w-60 absolute top-[276px] right-[450px] transition-all`} /> : <img alt="aiVideo" src={'/aiVideo.gif'} className={` h-60 w-60 absolute top-[276px] right-[450px] transition-all`} />}
+
+                {/* {multiple && ImageArr.map((val, i) => (
                             <div key={i} className="h-[50%] w-[50%] hidden">
                                 <img src={val} className="h-full w-full object-contain" />
                             </div>
                         ))} */}
-                    {/* <div className="flex flex-wrap h-full w-full ">
+                {/* <div className="flex flex-wrap h-full w-full ">
                     </div> */}
-                </div>
+                {/* </div> */}
             </div>
 
-            <div className="mt-10 flex flex-col justify-center items-center">
+            <div className="mt-12 flex flex-col justify-center items-center">
                 <h1 className="text-2xl font-semibold">How would you like to grow your business?</h1>
                 <div className='w-[100%] flex gap-10 justify-center items-start'>
 
