@@ -173,7 +173,7 @@ const Hero = () => {
                             }
                         }} >
                             {condition ? (<>
-                                <img alt="contact" src={!isHovered ? "/contactRotate.png" : "/glowLens.png"} className={`absolute object-contain ${!isHovered ? "w-24 h-24 top-[2] left-[2]" : "w-32 h-w-32 absolute top-[1%] left-[1%] z-50 hover:animate-spin"} `} />
+                                <img alt="contact" src={!isHovered ? "/contactRotate.png" : "/glowLens.png"} className={`absolute object-contain ${!isHovered ? "w-24 h-24 top-[2] left-[2]" : "w-32 h-w-32 absolute top-[1%] left-[1%] z-50 rotateImg"} `} />
 
                                 <Image alt="contact" width={92} height={92} src={!isHovered ? '/contact.png' : "/contact1.png"} className={`rounded-full ${!isHovered ? "w-16 h-16 contactIn" : "w-32 h-w-32 absolute top-[1%] left-[1%] z-0"} `} />
                             </>) : (<img alt="contact" src='/contactSelected.png' />)}
@@ -182,7 +182,7 @@ const Hero = () => {
                     </div>
 
                     <div className={`flex justify-center cursor-pointer items-center flex-col w-[120px] `}>
-                        <div onMouseEnter={() => setIsHovered1(true)} onMouseLeave={() => setIsHovered1(false)} className={`rounded-full ${/* !isHovered1 ? "bgGlass" :  */"bgGlass"}  w-[120px] h-[120px] flex items-center justify-center overflow-hidden relative`} onClick={() => {
+                        <div onMouseEnter={() => setIsHovered1(true)} onMouseLeave={() => setIsHovered1(false)} className={`rounded-full bgGlass mainDiv}  w-[120px] h-[120px] flex items-center justify-center overflow-hidden relative`} onClick={() => {
                             toggleConditon('/omniActive.png', setCondition1);
                             if (ImageArr.length !== 5) {
                                 setCondition1(false)
@@ -191,14 +191,14 @@ const Hero = () => {
                         }}>
                             {condition1 ? (<>
                                 <img src="/omni.png" className={`${isHovered1 && "w-32 h-w-32 absolute top-[1%] left-[1%] z-0"}`} />
-                                {isHovered1 && <img src="/glowLens.png" alt="glow" className={`object-contain w-32 h-w-32 absolute top-[0] left-[0] z-50 hover:animate-spin ${isHovered1 && "z-50"}`} />}
+                                {isHovered1 && <img src="/glowLens.png" alt="glow" className={`object-contain w-32 h-w-32 absolute top-[0] left-[0] z-50 rotateImg ${isHovered1 && "z-50"}`} />}
                             </>) : (<img alt="omni" src='/omniSelected.png' />)}
                         </div>
                         <p className="text-center">Omni-Channel AdManagement</p>
                     </div>
 
                     <div className="flex justify-center cursor-pointer items-center flex-col w-[120px]">
-                        <div onMouseEnter={() => setIsHovered2(true)} onMouseLeave={() => setIsHovered2(false)} className={`rounded-full bgGlass w-[120px] h-[120px] flex items-center justify-center overflow-hidden relative`} onClick={() => {
+                        <div onMouseEnter={() => setIsHovered2(true)} onMouseLeave={() => setIsHovered2(false)} className={`rounded-full bgGlass mainDiv w-[120px] h-[120px] flex items-center justify-center overflow-hidden relative`} onClick={() => {
                             toggleConditon('/schedulingActive.png', setCondition2);
                             if (ImageArr.length !== 5) {
                                 setCondition2(false)
@@ -207,14 +207,14 @@ const Hero = () => {
                         }} >
                             {condition2 ? (<>
                                 <img src="/scheduling.png" className={`${isHovered2 && "w-32 h-w-32 absolute top-[1%] left-[1%] z-0"}`} />
-                                {isHovered2 && <img src="/glowLens.png" alt="glow" className={`object-contain w-32 h-w-32 absolute top-[0] left-[0] z-50 hover:animate-spin ${isHovered2 && "z-50"}`} />}
+                                {isHovered2 && <img src="/glowLens.png" alt="glow" className={`object-contain w-32 h-w-32 absolute top-[0] left-[0] z-50 rotateImg ${isHovered2 && "z-50"}`} />}
                             </>) : (<img alt="omni" src='/schedulingSelected.png' />)}
                         </div>
                         <p className="text-center">e-Scheduling & Custom Links</p>
                     </div>
 
                     <div className="flex justify-center cursor-pointer items-center flex-col w-[120px]">
-                        <div onMouseEnter={() => setIsHovered3(true)} onMouseLeave={() => setIsHovered3(false)} className={`rounded-full bgGlass w-[120px] h-[120px] flex items-center justify-center overflow-hidden relative`} onClick={() => {
+                        <div onMouseEnter={() => setIsHovered3(true)} onMouseLeave={() => setIsHovered3(false)} className={`rounded-full bgGlass mainDiv w-[120px] h-[120px] flex items-center justify-center overflow-hidden relative`} onClick={() => {
                             toggleConditon('/chatbotsActive.png', setCondition3);
                             if (ImageArr.length !== 5) {
                                 setCondition3(false)
@@ -223,7 +223,7 @@ const Hero = () => {
                         }} >
                             {condition3 ? (<>
                                 <img src="/chatbots.png" className={`${isHovered3 && "w-32 h-w-32 absolute top-[1%] left-[1%] z-0"}`} />
-                                {isHovered3 && <img src="/glowLens.png" alt="glow" className={`object-contain w-32 h-w-32 absolute top-[0] left-[0] z-50 hover:animate-spin ${isHovered3 && "z-50"}`} />}
+                                {isHovered3 && <img src="/glowLens.png" alt="glow" className={`object-contain w-32 h-w-32 absolute top-[0] left-[0] z-50 rotateImg ${isHovered3 && "z-50"}`} />}
                             </>) : (<img alt="omni" src='/chatbotsSelected.png' />)}
                         </div>
 
@@ -231,7 +231,7 @@ const Hero = () => {
                     </div>
 
                     <div className="flex justify-center cursor-pointer items-center flex-col w-[120px]">
-                        <div onMouseEnter={() => setIsHovered4(true)} onMouseLeave={() => setIsHovered4(false)} className={`rounded-full bgGlass w-[120px] h-[120px] flex items-center justify-center overflow-hidden relative`} onClick={() => {
+                        <div onMouseEnter={() => setIsHovered4(true)} onMouseLeave={() => setIsHovered4(false)} className={`rounded-full bgGlass mainDiv w-[120px] h-[120px] flex items-center justify-center overflow-hidden relative`} onClick={() => {
                             toggleConditon('/signatureActive.png', setCondition4);
                             if (ImageArr.length !== 5) {
                                 setCondition4(false)
@@ -240,14 +240,14 @@ const Hero = () => {
                         }} >
                             {condition4 ? (<>
                                 <img src="/signature.png" className={`${isHovered4 && "w-32 h-w-32 absolute top-[1%] left-[1%] z-0"}`} />
-                                {isHovered4 && <img src="/glowLens.png" alt="glow" className={`object-contain w-32 h-w-32 absolute top-[0] left-[0] z-50 hover:animate-spin ${isHovered4 && "z-50"}`} />}
+                                {isHovered4 && <img src="/glowLens.png" alt="glow" className={`object-contain w-32 h-w-32 absolute top-[0] left-[0] z-50 rotateImg ${isHovered4 && "z-50"}`} />}
                             </>) : (<img alt="omni" src='/signatureSelected.png' />)}
                         </div>
                         <p className="text-center">e-signature & Fillings</p>
                     </div>
 
                     <div className="flex justify-center cursor-pointer items-center flex-col w-[120px]">
-                        <div onMouseEnter={() => setIsHovered5(true)} onMouseLeave={() => setIsHovered5(false)} className={`rounded-full bgGlass w-[120px] h-[120px] flex items-center justify-center overflow-hidden relative`} onClick={() => {
+                        <div onMouseEnter={() => setIsHovered5(true)} onMouseLeave={() => setIsHovered5(false)} className={`rounded-full bgGlass mainDiv w-[120px] h-[120px] flex items-center justify-center overflow-hidden relative`} onClick={() => {
                             toggleConditon('/secureActive.png', setCondition5);
                             if (ImageArr.length !== 5) {
                                 setCondition5(false)
@@ -256,14 +256,14 @@ const Hero = () => {
                         }} >
                             {condition5 ? (<>
                                 <img src="/secure.png" className={`${isHovered5 && "w-32 h-w-32 absolute top-[1%] left-[1%] z-0"}`} />
-                                {isHovered5 && <img src="/glowLens.png" alt="glow" className={`object-contain w-32 h-w-32 absolute top-[0] left-[0] z-50 hover:animate-spin ${isHovered5 && "z-50"}`} />}
+                                {isHovered5 && <img src="/glowLens.png" alt="glow" className={`object-contain w-32 h-w-32 absolute top-[0] left-[0] z-50 rotateImg ${isHovered5 && "z-50"}`} />}
                             </>) : (<img alt="omni" src='/secureSelected.png' />)}
                         </div>
                         <p className="text-center">Secure Payment Links</p>
                     </div>
 
                     <div className="flex justify-center cursor-pointer items-center flex-col w-[120px]">
-                        <div onMouseEnter={() => setIsHovered6(true)} onMouseLeave={() => setIsHovered6(false)} className={`rounded-full bgGlass w-[120px] h-[120px] flex items-center  justify-center overflow-hidden relative`} onClick={() => {
+                        <div onMouseEnter={() => setIsHovered6(true)} onMouseLeave={() => setIsHovered6(false)} className={`rounded-full bgGlass mainDiv w-[120px] h-[120px] flex items-center  justify-center overflow-hidden relative`} onClick={() => {
                             toggleConditon('/learningActive.png', setCondition6);
                             if (ImageArr.length !== 5) {
                                 setCondition6(false)
@@ -272,14 +272,14 @@ const Hero = () => {
                         }} >
                             {condition6 ? (<>
                                 <img src="/learning.png" className={`${isHovered6 && "w-32 h-w-32 absolute top-[1%] left-[1%] z-0"}`} />
-                                {isHovered6 && <img src="/glowLens.png" alt="glow" className={`object-contain w-32 h-w-32 absolute top-[0] left-[0] z-50 hover:animate-spin ${isHovered6 && "z-50"}`} />}
+                                {isHovered6 && <img src="/glowLens.png" alt="glow" className={`object-contain w-32 h-w-32 absolute top-[0] left-[0] z-50 rotateImg ${isHovered6 && "z-50"}`} />}
                             </>) : (<img alt="learning" src='/learningSelected.png' />)}
                         </div>
                         <p className="text-center">Learning Management Systems</p>
                     </div>
 
                     <div className="flex justify-center cursor-pointer items-center flex-col w-[120px]">
-                        <div onMouseEnter={() => setIsHovered7(true)} onMouseLeave={() => setIsHovered7(false)} className={`rounded-full relative ${!isHovered7 ? "bgGlass p-3" : "bg-transparent p-0"} w-[120px] h-[120px] mainDiv`} onClick={() => {
+                        <div onMouseEnter={() => setIsHovered7(true)} onMouseLeave={() => setIsHovered7(false)} className={`rounded-full relative bgGlass p-3 bg-transparent w-[120px] h-[120px] mainDiv`} onClick={() => {
                             toggleConditon('/privateActive.png', setCondition7);
                             if (ImageArr.length !== 5) {
                                 setCondition7(false)
@@ -287,7 +287,7 @@ const Hero = () => {
                             }
                         }} >
                             {condition7 ? (<>
-                                <img alt="private" src={!isHovered7 ? "/privateRotate.png" : "/glowLens.png"} className={`absolute object-contain ${!isHovered7 ? "w-24 h-24 top-[2] left-[2]" : "w-32 h-w-32 absolute top-[1%] left-[1%] z-50 hover:animate-spin"} `} />
+                                <img alt="private" src={!isHovered7 ? "/privateRotate.png" : "/glowLens.png"} className={`absolute object-contain ${!isHovered7 ? "w-24 h-24 top-[2] left-[2]" : "w-32 h-w-32 absolute top-[1%] left-[1%] z-50 rotateImg"} `} />
 
                                 <Image alt="private" width={92} height={92} src={!isHovered7 ? '/private.png' : "/private1.png"} className={`rounded-full ${!isHovered7 ? "w-16 h-16 contactIn" : "w-32 h-w-32 absolute top-[1%] left-[1%] z-0"} `} />
                             </>) : (<img alt="private" src='/privateSelected.png' />)}
