@@ -1,8 +1,6 @@
 "use client"
 import React, { useState } from "react";
 import Image from "next/image";
-import Video from 'next-video';
-import aiVideo from '../../videos/aiVideo.gif';
 
 const Hero = () => {
     const [placeholder, setPlaceholder] = useState('')
