@@ -50,12 +50,6 @@ const Hero = () => {
                 setPlaceholder4(src)
                 if (ImageArr.length === 4) setMultiple(true)
                 return
-            } else {
-                if (ImageArr.length === 5) {
-                    setMultiple(true)
-                    return
-                }
-                return
             }
         } else {
             if (src === '/contactActive.png') {
@@ -87,7 +81,7 @@ const Hero = () => {
         }
     }
     return (
-        <section className="flex flex-col items-center px-9 z-0 mt-20 ">
+        <section className="flex flex-col items-center z-0 mt-20  md:px-[100px] px-[40px]">
             <div className="relative">
                 <div className="h-56 w-[970px] absolute bottom-[140px] right-[70px]">
                     <div className="flex justify-center items-center h-full w-full flex-col">
@@ -290,7 +284,7 @@ const Hero = () => {
                 <h3 className="mt-2 font-semibold">14 Day Free Trial Plans Starting at $97/Months</h3>
             </div>
 
-        </section >
+        </section>
     );
 };
 

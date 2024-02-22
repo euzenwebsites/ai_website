@@ -1,11 +1,10 @@
 import { ArrowRight, CheckBox } from "@mui/icons-material";
-import Image from "next/image";
 import React from "react";
 
 const Section2 = () => {
     return (
         <>
-            <div className="px-20 flex items-center mt-16">
+            <div className="md:px-[100px] px-[40px] flex items-center mt-16">
                 <div className="flex-[0.5] h-full w-full ">
                     <h1 className="font-bold text-4xl">
                         A.I. Chat Bots Get Leads & Sales Fast
@@ -50,12 +49,12 @@ const Section2 = () => {
                     <TryFreeBtn />
                 </div>
                 <div className="flex-[0.5] h-full w-full">
-                    <img src='/chatBot.png' />
+                    <img src='/chatBot.png' alt="chatBot" />
                 </div>
             </div>
             <div className="px-20 flex items-center mt-12 gap-20">
                 <div className="flex-[0.5] h-full w-full">
-                    <img src="/turnLeads.png" />
+                    <img src="/turnLeads.png" alt="turnLeads" />
                 </div>
                 <div className="flex-[0.5] h-full">
                     <h1 className="font-bold text-4xl">
