@@ -148,17 +148,8 @@ const Hero = () => {
                         </div>
                     </div>
                 </>
-                {/* {)}} */}
-                {!multiple ? <img alt="aiBanner" src="/aibanner.png" className={` h-60 w-60 absolute top-[276px] right-[450px] transition-all`} /> : <img alt="aiVideo" src={'/aiVideo.gif'} className={` h-60 w-60 absolute top-[276px] right-[450px] transition-all`} />}
+                {!multiple ? <Image width={240} height={240} alt="aiBanner" src="/aibanner.png" className={` h-60 w-60 absolute top-[276px] right-[450px] transition-all`} /> : <Image width={240} height={240} alt="aiVideo" src={'/aiVideo.gif'} className={` h-60 w-60 absolute top-[276px] right-[450px] transition-all`} />}
 
-                {/* {multiple && ImageArr.map((val, i) => (
-                            <div key={i} className="h-[50%] w-[50%] hidden">
-                                <img src={val} className="h-full w-full object-contain" />
-                            </div>
-                        ))} */}
-                {/* <div className="flex flex-wrap h-full w-full ">
-                    </div> */}
-                {/* </div> */}
             </div>
 
             <div className="mt-12 flex flex-col justify-center items-center">
