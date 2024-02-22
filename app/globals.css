@@ -9,30 +9,6 @@
     background-size: cover;
 }
 
-/* .glow1 {
-    width: 80px;
-    height: 80px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-} */
-/* z-index: -1; */
-/* object-fit: contain; */
-/* background-color: aqua; */
-
-/* .glow1:hover{
-    box-shadow: inset  2px 2px 20px rgba(0, 204, 255, 0.2);
-} */
-
-.glow1:hover {
-    box-shadow: 50px 50px 100px #059ae0,
-        0 0 50px #03E2E1,
-        0 0 50px #03E2E1,
-        0 0 50px #03E2E1;
-
-}
-
 .mainDiv:hover .rotateImg{
     animation: rotate 3s linear infinite !important;
 }
@@ -58,4 +34,15 @@
 .bgGlass{
     background-image: url(/glass.png) !important;
     background-size: contain;
+}
+
+.bgCurve{
+    background-image: url('/curve.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.bgCurve1{
+    background-image: url('/curve1.png');
+    background-repeat: no-repeat;
+    background-position: center;
 }

@@ -31,7 +31,9 @@ const Section2 = () => {
     return (
         <>
             <Section2Cmp customClass="flex-col-reverse mt-28 xl:mt-16 sm:flex-row" data={chatBot} h1=" A.I. Chat Bots Get Leads & Sales Fast " imgSrc="/chatBot.png" />
-            <Section2Cmp customClass="flex-col mt-12 sm:gap-9 sm:flex-row-reverse" data={leads} h1=" Turn Leads into Sales NOW. " imgSrc="/turnLeads.png" />
+            <div className="bgCurve w-full h-56 hidden sm:flex"></div>
+            <Section2Cmp customClass="flex-col sm:gap-9 sm:flex-row-reverse sm:mt-0 mt-8" data={leads} h1=" Turn Leads into Sales NOW. " imgSrc="/turnLeads.png" />
+            <div className="bgCurve1 w-full h-56 hidden sm:flex"></div>
         </>
     );
 };

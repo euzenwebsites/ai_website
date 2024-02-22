@@ -12,7 +12,7 @@ const Header = ({ custom1, custom2 }) => {
                 <div className=" flex items-center gap-1">
                     <div to="/" className="flex justify-center place-items-center">
                         <img src="/logo.png" alt="logo" className="w-[180px]  cursor-pointer" />
-                        <div className="md:flex justify-between items-center text-gray-500 ml-5 hidden md:visible md:block">
+                        <div className="md:flex justify-between items-center text-gray-500 ml-5 hidden md:visible ">
                             <p className=""> Products<KeyboardArrowDown /></p>
                             <p className="ml-2">Platforms<KeyboardArrowDown /></p>
                             <p className="ml-2">Pricing<KeyboardArrowDown /></p>
