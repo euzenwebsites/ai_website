@@ -57,9 +57,6 @@ const Hero = () => {
                 }
                 return
             }
-        } else if (placeholder == '' && placeholder1 == '' && placeholder2 == '' && placeholder3 == '' && placeholder4 == '') {
-            return
-
         } else {
             if (src === '/contactActive.png') {
                 setCondition(true)
@@ -148,7 +145,8 @@ const Hero = () => {
                         </div>
                     </div>
                 </>
-                {!multiple ? <Image width={240} height={240} alt="aiBanner" src="/aibanner.png" className={` h-60 w-60 absolute top-[276px] right-[450px] transition-all`} /> : <Image width={240} height={240} alt="aiVideo" src={'/aiVideo.gif'} className={` h-60 w-60 absolute top-[276px] right-[450px] transition-all`} />}
+                {multiple && <Image width={240} height={240} alt="aiVideo" src={'/aiVideo.gif'} className={` h-60 w-60 absolute top-[276px] right-[450px] transition-all`} />}
+                {!multiple && <Image width={240} height={240} alt="aiBanner" src="/aibanner.png" className={` h-60 w-60 absolute top-[276px] right-[450px] transition-all`} />}
 
             </div>
 
