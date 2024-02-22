@@ -1,8 +1,7 @@
 "use client"
 
 import React, { useState } from "react";
-import { Bars3BottomRightIcon, XMarkIcon } from "@heroicons/react/24/solid";
-import { KeyboardArrowDown } from "@mui/icons-material";
+import { Close, KeyboardArrowDown, Menu } from "@mui/icons-material";
 
 const Header = ({ custom1, custom2 }) => {
     let [open, setOpen] = useState(false);
@@ -25,14 +24,14 @@ const Header = ({ custom1, custom2 }) => {
                         onClick={() => setOpen(!open)}
                         className="absolute right-8 top-9 text-gray-500 cursor-pointer md:hidden w-7 h-7"
                     >
-                        {open ? <XMarkIcon /> : <Bars3BottomRightIcon />}
+                        {open ? <Close /> : <Menu />}
                     </div>
                 </div>
                 <ul
                     className={`animate__animated animate__backInLeft md:flex md:items-center absolute md:static text-gray-500 bg-white md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? "top-20" : "top-[-490px]"
                         }`}
                 >
-                    <div className="md:my-0 md:mt-0 mt-4 md:flex justify-between items-center text-gray-500 md:ml-5 visible md:hidden">
+                    <div className="md:my-0 md:mt-0 mt-4 justify-between items-center text-gray-500 md:ml-5 visible md:hidden">
                         <p className="md:mt-0"> Products<KeyboardArrowDown /></p>
                         <p className="md:ml-2 mt-5 md:mt-0">Platforms<KeyboardArrowDown /></p>
                         <p className="md:ml-2 mt-5 md:mt-0">Resources<KeyboardArrowDown /></p>

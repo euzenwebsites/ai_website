@@ -1,107 +1,39 @@
-import { ArrowRight, CheckBox } from "@mui/icons-material";
 import React from "react";
+import Section2Cmp from "./ui/Section2Cmp";
 
 const Section2 = () => {
+    const chatBot = {
+        para: [
+            ` Our A.I. Chatbots ${"are'nt"} like the ones ${"you're"} used to seeing. `,
+            "They have a JOB ...and that job is to turn a stranger into a lead, answer their questions, overcome their objections, and help you make the sale ...FAST.",
+            "Simply give the bot your website and it'll train itself automatically ...so it'll know exactly what to say."
+        ],
+        checkPara: [
+            "Works over SMS.",
+            "Works over Messenger. ",
+            "Works over WebChat.",
+            "Works over DMs. ",
+        ]
+    }
+    const leads = {
+        para: [
+            'You know how they say "the fortune is in the follow up?"',
+            "They say it because it's TRUE.",
+            "RainmakerAI has 26 pre-built, fully automated, template based follow up campaigns you can start using immediately.",
+            "Email and SMS campaigns specifically built to ..."
+        ],
+        checkPara: [
+            "Turn new leads into sales or appointments ASAP.",
+            "Turn abandoned carts into sales within four hours.",
+            'Turn old "dead" leads into customers or appointments within 24 hours.'
+        ]
+    }
     return (
         <>
-            <div className="md:px-[100px] px-[40px] flex items-center mt-16">
-                <div className="flex-[0.5] h-full w-full ">
-                    <h1 className="font-bold text-4xl">
-                        A.I. Chat Bots Get Leads & Sales Fast
-                    </h1>
-                    <div className="mt-4 text-xl font-medium">
-                        <p className="">
-                            Our A.I. Chatbots {"are'nt"} like the ones {"you're"} used to
-                            seeing.
-                        </p>
-                        <p className="mt-5">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam
-                            dicta blanditiis velit! Deserunt ad perferendis qui, praesentium
-                            velit repellat quia magni.
-                        </p>
-                        <p className="mt-5">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam
-                            dicta blanditiis velit! Deserunt ad perferendis qui.
-                        </p>
-                    </div>
-                    <div className="mt-6 text-lg font-medium">
-                        <div className="flex items-center gap-2">
-
-                            <CheckBox fontSize="medium" />
-                            <p>Works over SMS. </p>
-                        </div>
-                        <div className="flex items-center gap-2 mt-2">
-
-                            <CheckBox fontSize="medium" />
-                            <p>Works over Messenger. </p>
-                        </div>
-                        <div className="flex items-center gap-2 mt-2">
-
-                            <CheckBox fontSize="medium" />
-                            <p>Works over WebChat. </p>
-                        </div>
-                        <div className="flex items-center gap-2 mt-2">
-
-                            <CheckBox fontSize="medium" />
-                            <p>Works over DMs. </p>
-                        </div>
-                    </div>
-                    <TryFreeBtn />
-                </div>
-                <div className="flex-[0.5] h-full w-full">
-                    <img src='/chatBot.png' alt="chatBot" />
-                </div>
-            </div>
-            <div className="px-20 flex items-center mt-12 gap-20">
-                <div className="flex-[0.5] h-full w-full">
-                    <img src="/turnLeads.png" alt="turnLeads" />
-                </div>
-                <div className="flex-[0.5] h-full">
-                    <h1 className="font-bold text-4xl">
-                        Turn Leads into Sales NOW.
-                    </h1>
-                    <div className="mt-4 text-xl font-medium">
-                        <p className="">
-                            Our A.I. Chatbots {"are'nt"} like the ones {"you're"} used to
-                            seeing.
-                        </p>
-                        <p className="mt-5">
-                            Lorem ipsum dolor sit amet,
-                        </p>
-                        <p className="mt-5">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam
-                            dicta blanditiis velit! Deserunt ad perferendis qui.
-                        </p>
-                        <p className="mt-5">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit ...
-                        </p>
-                    </div>
-                    <div className="mt-6 text-lg font-medium">
-                        <div className="flex items-center gap-2">
-
-                            <CheckBox fontSize="large" />
-                            <p>Works over SMS. Lorem, ipsum dolor.</p>
-                        </div>
-                        <div className="flex items-center gap-2 mt-2">
-
-                            <CheckBox fontSize="large" />
-                            <p>Works over Messenger. Lorem, ipsum </p>
-                        </div>
-                        <div className="flex items-center gap-2 mt-2">
-
-                            <CheckBox fontSize="large" />
-                            <p>Works over WebChat. Lorem ipsum dolor sit amet. </p>
-                        </div>
-                    </div>
-                    <TryFreeBtn />
-                </div>
-            </div>
+            <Section2Cmp customClass="flex-col-reverse mt-28 xl:mt-16 sm:flex-row" data={chatBot} h1=" A.I. Chat Bots Get Leads & Sales Fast " imgSrc="/chatBot.png" />
+            <Section2Cmp customClass="flex-col mt-12 sm:gap-9 sm:flex-row-reverse" data={leads} h1=" Turn Leads into Sales NOW. " imgSrc="/turnLeads.png" />
         </>
     );
 };
 
 export default Section2;
-
-const TryFreeBtn = () => (
-    <button className="mt-6 ml-[-20px] text-black text-3xl rounded-2xl font-bold flex items-center p-3 bg-[#03E2E1]">Try It Free<ArrowRight fontSize="large" /></button>
-)

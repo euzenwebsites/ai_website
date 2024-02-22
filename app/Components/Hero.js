@@ -81,9 +81,9 @@ const Hero = () => {
         }
     }
     return (
-        <section className="flex flex-col items-center z-0 mt-20  md:px-[100px] px-[40px]">
+        <section className="xl:flex flex-col items-center z-0 mt-20 hidden md:px-[100px] sm:px-[40px] px-[10px]">
             <div className="relative">
-                <div className="h-56 w-[970px] absolute bottom-[140px] right-[70px]">
+                <div className="h-56 w-[970px] absolute bottom-[135px] right-[70px]">
                     <div className="flex justify-center items-center h-full w-full flex-col">
                         <h1 className="text-black text-5xl font-bold text-center"> <span className="text-[#03E2E1]">Every</span> <span className="font-normal">Tool </span>your business <span className="text-[#03E2E1]">Needs</span>,  </h1>
                         <h1 className="text-[#03E2E1] pt-3 text-6xl font-bold text-center">In-One-Place<span className="text-[black!important]">...</span> </h1>
