@@ -1,5 +1,5 @@
 import { CheckBox } from "@mui/icons-material";
-import { ArrowRight } from "@mui/icons-material"
+import { ArrowRight } from "@mui/icons-material";
 import Image from "next/image";
 
 const Section2Cmp = ({ h1, data, imgSrc, customClass }) => (

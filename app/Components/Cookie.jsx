@@ -11,7 +11,7 @@ const Cookie = () => {
         show && <div className="bottom-0 fixed bg-white z-50 w-screen px-4 py-2">
           <div className="flex justify-between items-center text-gray-500">
             <p>
-              We use cookies to ensure you have the best experience on our site to analyze traffic, and enhance our marketing activities. <a className="text-gray-600 underline">Learn more</a>
+              We use cookies to ensure you have the best experience on our site, to analyze traffic, and enhance our marketing activities. <a className="text-gray-600 underline">Learn more</a>
             </p>
             <div className="flex justify-between items-center gap-2">
               <button className="bg-black text-white p-2 rounded-xl">
