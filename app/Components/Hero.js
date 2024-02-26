@@ -146,9 +146,9 @@ const Hero = () => {
                         </div>
                     </div>
                 </div>
-                <Image width={160} height={160} alt="aiVideo" src={'/aiVideo.gif'} className={`xl:h-64 h-40 w-40 xl:w-64 absolute bottom-[-22px] xl:right-[530px] right-[328px] transition-all afterlg:right-[355px] ${toggleImg && 'z-50 lg:bottom-[-15px] bottom-[-20px]'} `} />
+                <Image width={160} height={160} alt="aiVideo" src={'/aiVideo.gif'} className={`xl:h-60 h-40 w-40 xl:w-60 absolute bottom-[-10px] xl:right-[530px] right-[328px] transition-all afterlg:right-[355px] ${toggleImg && 'z-50 bottom-[-5px]'} `} />
 
-                <Image width={160} height={160} alt="aiBanner" src="/aibanner.png" className={`xl:h-72 h-44 w-44 xl:w-72 absolute bottom-[-22px] xl:right-[510px] right-[320px] transition-all afterlg:right-[348px] z-0`} />
+                <Image width={160} height={160} alt="aiBanner" src="/aibanner.png" className={`xl:h-64 h-44 w-44 xl:w-64 absolute bottom-[-10px] xl:right-[520px] right-[320px] transition-all afterlg:right-[348px] z-0`} />
 
             </div>
 
