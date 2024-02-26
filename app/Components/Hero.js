@@ -54,7 +54,7 @@ const Hero = () => {
                     setToggleImg(true)
                     setTimeout(() => {
                         setToggleImg(false)
-                    }, 2000)
+                    }, 2500)
                 }
                 return
             }
@@ -148,7 +148,7 @@ const Hero = () => {
                 </div>
                 <Image width={160} height={160} alt="aiVideo" src={'/aiVideo.gif'} className={`xl:h-60 h-40 w-40 xl:w-60 absolute bottom-[-10px] xl:right-[530px] right-80 transition-all afterlg:right-[355px] ${toggleImg && 'z-50'} `} />
 
-                <Image width={160} height={160} alt="aiBanner" src="/aibanner.png" className={`xl:h-64 h-40 w-40 xl:w-64 absolute bottom-[-10px] xl:right-[520px] right-80 transition-all afterlg:right-[355px] z-0`} />
+                <Image width={160} height={160} alt="aiBanner" src="/aibanner.png" className={`xl:h-64 h-44 w-44 xl:w-64 absolute bottom-[-10px] xl:right-[520px] right-[310px] transition-all afterlg:right-[348px] z-0`} />
 
             </div>
 
