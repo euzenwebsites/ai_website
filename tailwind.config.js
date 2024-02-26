@@ -24,6 +24,12 @@ module.exports = {
 
       'xl': '1280px',
 
+      'afterxl': '1334px',
+
+      'before2xl': '1390px',
+
+      'before2xlagin': '1528px',
+
       '2xl': '1536px',
     }
   },

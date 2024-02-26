@@ -90,7 +90,7 @@ const Hero = () => {
     return (
         <section className="lg:flex hidden flex-col items-center z-0 mt-16 md:px-[100px] sm:px-[40px] px-[10px] w-full">
             <div className="relative">
-                <div className="lg:h-56 w-full absolute xl:top-[150px] xl:left-6 left-5 top-12 afterlg:top-16">
+                <div className="lg:h-56 w-full absolute xl:top-[130px] xl:left-6 left-5 top-12 afterlg:top-16 afterxl:top-36">
                     <div className="flex justify-center items-center h-full w-full flex-col">
                         <h1 className="text-black xl:text-5xl text-3xl font-bold text-center"> <span className="text-[#03E2E1]">Every</span> <span className="font-normal">Tool </span>your business <span className="text-[#03E2E1]">Needs</span>,  </h1>
                         <h1 className="text-[#03E2E1] pt-3 text-4xl xl:text-6xl font-bold text-center">In-One-Place<span className="text-[black!important]">...</span> </h1>
@@ -146,9 +146,9 @@ const Hero = () => {
                         </div>
                     </div>
                 </div>
-                <Image width={160} height={160} alt="aiVideo" src={'/aiVideo.gif'} className={`xl:h-60 h-40 w-40 xl:w-60 absolute bottom-[-10px] xl:right-[530px] right-[328px] transition-all afterlg:right-[355px] ${toggleImg && 'z-50 bottom-[-5px]'} `} />
+                <Image width={160} height={160} alt="aiVideo" src={'/aiVideo.gif'} className={`xl:h-60 h-40 w-40 xl:w-60 absolute bottom-[-10px] xl:right-[410px] before2xl:bottom-[-40px] afterxl:right-[440px]  xl:bottom-[-50px] right-[328px] transition-all afterlg:right-[355px] before2xl:right-[470px] before2xlagin:right-[530px] before2xlagin:bottom-[-15px] ${toggleImg && 'z-50 bottom-[-5px]'} `} />
 
-                <Image width={160} height={160} alt="aiBanner" src="/aibanner.png" className={`xl:h-64 h-44 w-44 xl:w-64 absolute bottom-[-10px] xl:right-[520px] right-[320px] transition-all afterlg:right-[348px] z-0`} />
+                <Image width={160} height={160} alt="aiBanner" src="/aibanner.png" className={`xl:h-64 h-44 w-44 xl:w-64 absolute bottom-[-10px] xl:right-[400px]  afterxl:right-[430px] xl:bottom-[-50px] right-[320px] transition-all afterlg:right-[348px] before2xl:right-[460px] z-0 before2xl:bottom-[-43px] before2xlagin:right-[520px] before2xlagin:bottom-[-15px]`} />
 
             </div>
 
