@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 
 const page = () => {
@@ -6,7 +7,7 @@ const page = () => {
             <h1 className='text-4xl font-medium mt-3'>Welcome to Toolbelts.ai</h1>
             <p className='text-lg font-semibold text-gray-600 mt-1'>14 Day Trial, only pay when you got results.</p>
             <button className="py-4 px-6 border justify-center flex gap-2 border-slate-200 dark:border-slate-700 rounded-lg text-slate-700 dark:text-slate-200 hover:border-slate-400 dark:hover:border-slate-500 hover:text-slate-900 dark:hover:text-slate-300 hover:shadow transition duration-150 sm:w-[400px] w-[80%] mb-0 mt-14">
-                <img
+                <Image height={24} width={24}
                     className="w-6 h-6"
                     src="https://www.svgrepo.com/show/475656/google-color.svg"
                     loading="lazy"

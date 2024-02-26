@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { Close, KeyboardArrowDown, Menu } from "@mui/icons-material";
 import Link from "next/link";
+import Image from "next/image";
 
 const Header = ({ custom1, custom2 }) => {
     let [open, setOpen] = useState(false);
@@ -13,7 +14,7 @@ const Header = ({ custom1, custom2 }) => {
             <div className="md:flex items-center justify-between bg-white px-5">
                 <div className=" flex items-center gap-1">
                     <div to="/" className="flex justify-center place-items-center">
-                        <img src="/logo.png" alt="logo" className="h-20 cursor-pointer" />
+                        <Image height={20} width={200} src="/logo.png" alt="logo" className="h-20 cursor-pointer" />
                         <div className="lg:flex justify-between items-center text-gray-500 ml-5 hidden lg:visible ">
                             {Array("Products", "Platforms", "Resources").map((val, i) => <IconPara list={val} key={i} customClass='ml-2' />)}
                         </div>

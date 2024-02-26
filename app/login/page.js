@@ -21,8 +21,8 @@ const page = () => {
         />
         <span>Google</span>
       </button>
-      <p className='text-lg text-gray-600'>Don't have an account yet? <span className='text-[#4ca4ed!important] cursor-pointer'>Sign up</span> </p>
-      <p className='text-lg text-gray-600'>Can't log in? <span className='text-[#4ca4ed!important] cursor-pointer'>Visit our help center</span> </p>
+      <p className='text-lg text-gray-600'>Don&apos;t have an account yet? <span className='text-[#4ca4ed!important] cursor-pointer'>Sign up</span> </p>
+      <p className='text-lg text-gray-600'>Can&apos;t log in? <span className='text-[#4ca4ed!important] cursor-pointer'>Visit our help center</span> </p>
     </div>
   )
 }
