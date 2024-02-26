@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import { ArrowRight } from "@mui/icons-material";
+import TryFree from './ui/TryFree';
 
 const ChatSection = () => (
   <div className='md:px-[100px] sm:px-[40px] px-[20px] mt-4 flex justify-center items-center flex-col'>
@@ -39,9 +40,10 @@ const ChatSection = () => (
         </div>
       </div>
     </div>
-    <button className='mt-8 px-6 py-3 bg-[#04E1E1] text-black font-extrabold text-2xl rounded-xl'>
-      Try It Free<ArrowRight />
-    </button>
+    {/* <button className='mt-8 px-6 py-3 bg-[#04E1E1] text-black font-extrabold text-2xl rounded-xl'>
+      Try It Free<ArrowRight /> */}
+    {/* </button> */}
+    <TryFree customClass="mt-8" />
   </div>
 )
 
