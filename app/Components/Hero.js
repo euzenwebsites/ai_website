@@ -24,6 +24,7 @@ const Hero = () => {
     const [isHovered5, setIsHovered5] = useState(false);
     const [isHovered6, setIsHovered6] = useState(false);
     const [isHovered7, setIsHovered7] = useState(false);
+    const [toggleImg, setToggleImg] = useState(false);
     const [multiple, setMultiple] = useState(false)
     let [ImageArr, setImageArr] = useState([]);
 
@@ -48,7 +49,13 @@ const Hero = () => {
             } else if (placeholder4 === '') {
                 setImageArr([...ImageArr, src])
                 setPlaceholder4(src)
-                if (ImageArr.length === 4) setMultiple(true)
+                if (ImageArr.length === 4) {
+                    setMultiple(true)
+                    setToggleImg(true)
+                    setTimeout(() => {
+                        setToggleImg(false)
+                    }, 2000)
+                }
                 return
             }
         } else {
@@ -139,8 +146,9 @@ const Hero = () => {
                         </div>
                     </div>
                 </div>
-                {multiple && <Image width={160} height={160} alt="aiVideo" src={'/aiVideo.gif'} className={` xl:h-60 h-40 w-40 xl:w-60 absolute bottom-[-10px] xl:right-[530px] right-80 transition-all afterlg:right-[355px]`} />}
-                {!multiple && <Image width={160} height={160} alt="aiBanner" src="/aibanner.png" className={` xl:h-60 h-40 w-40 xl:w-60 absolute bottom-[-10px] xl:right-[530px] right-80 transition-all afterlg:right-[355px]`} />}
+                <Image width={160} height={160} alt="aiVideo" src={'/aiVideo.gif'} className={`xl:h-60 h-40 w-40 xl:w-60 absolute bottom-[-10px] xl:right-[530px] right-80 transition-all afterlg:right-[355px] ${toggleImg && 'z-50'} `} />
+
+                <Image width={160} height={160} alt="aiBanner" src="/aibanner.png" className={`xl:h-64 h-40 w-40 xl:w-64 absolute bottom-[-10px] xl:right-[520px] right-80 transition-all afterlg:right-[355px] z-0`} />
 
             </div>
 
