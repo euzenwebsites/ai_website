@@ -26,10 +26,9 @@ const Hero = () => {
     const [isHovered6, setIsHovered6] = useState(false);
     const [isHovered7, setIsHovered7] = useState(false);
     const [toggleImg, setToggleImg] = useState(false);
-    const [multiple, setMultiple] = useState(false)
     let [ImageArr, setImageArr] = useState([]);
 
-    const toggleConditon = (src, func) => {
+    const toggleConditon = (src) => {
         if (src !== placeholder && src !== placeholder1 && src !== placeholder2 && src !== placeholder3 && src !== placeholder4) {
             if (placeholder === '') {
                 setImageArr([...ImageArr, src])
@@ -51,7 +50,6 @@ const Hero = () => {
                 setImageArr([...ImageArr, src])
                 setPlaceholder4(src)
                 if (ImageArr.length === 4) {
-                    setMultiple(true)
                     setToggleImg(true)
                     setTimeout(() => {
                         setToggleImg(false)

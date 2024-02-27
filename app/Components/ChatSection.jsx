@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import React from 'react'
-import { ArrowRight } from "@mui/icons-material";
 import TryFree from './ui/TryFree';
 
 const ChatSection = () => (

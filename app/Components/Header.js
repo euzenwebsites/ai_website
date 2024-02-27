@@ -8,7 +8,6 @@ import Image from "next/image";
 const Header = ({ custom1, custom2 }) => {
     let [open, setOpen] = useState(false);
 
-
     return (
         <div className={`shadow w-full fixed top-0 left-0 z-[100] ${custom1}`}>
             <div className="md:flex items-center justify-between bg-white px-5">

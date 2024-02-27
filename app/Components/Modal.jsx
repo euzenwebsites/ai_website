@@ -2,12 +2,8 @@
 
 import * as React from 'react';
 import Backdrop from '@mui/material/Backdrop';
-import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import Fade from '@mui/material/Fade';
-import Button from '@mui/material/Button';
-// import 'bootstrap/dist/css/bootstrap.min.css';
-// import { ProgressBar } from 'react-bootstrap';
 import { TextField } from '@mui/material';
 import { ArrowRight, CancelSharp } from '@mui/icons-material';
 
@@ -47,11 +43,11 @@ export default function TransitionsModal({ customClass }) {
                                     <span className='absolute bottom-[2px] left-[25%] h-3 w-3 rotate-45 bg-[#1471A8] '></span>
                                 </div>
                                 <div className='p-3 bg-[#FFFFFF]'>
-                                    <form>
+                                    <form onSubmit={e => e.preventDefault()}>
                                         <TextField id="outlined-textarea" label="Full Name..." multiline className='w-full' />
-                                        <TextField id="outlined-textarea" label="Email Address..." multiline className='w-full mt-3' />
-                                        <TextField id="outlined-textarea" label="Phone Number..." multiline className='w-full mt-3' />
-                                        <button className='w-full h-14 bg-[#04E1E1] text-center mt-3 text-3xl font-extrabold'>Go to Step #2</button>
+                                        <TextField id="outlined-textarea" label="Email Address..." multiline className='w-full mt-[12px!important]' />
+                                        <TextField id="outlined-textarea" label="Phone Number..." multiline className='w-full mt-[12px!important]' />
+                                        <button type='submit' className='w-full h-14 bg-[#04E1E1] text-center mt-3 text-3xl font-extrabold'>Go to Step #2</button>
                                         <p className="w-full text-center text-sm text-gray-400 mt-3"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti mollitia est quidem, perferendis vero earum praesentium repellendus iure esse hic eos nesciunt, saepe dolorem cupiditate! </p>
                                     </form>
                                 </div>
