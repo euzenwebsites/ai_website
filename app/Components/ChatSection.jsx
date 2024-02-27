@@ -21,18 +21,18 @@ const ChatSection = () => (
             <form className='text-white text-sm'>
               <div className='flex flex-col'>
                 <label htmlFor="name">Full Name:</label>
-                <input type="text" id='name' placeholder='Type here...' className='px-1 py-2 rounded-lg mt-1' />
+                <input type="text" id='name' placeholder='Type here...' className='px-1 py-2 rounded-lg mt-1 text-black' />
               </div>
               <div className='flex flex-col mt-2'>
                 <label htmlFor="phone">Phone Number:</label>
-                <input type="text" id='phone' placeholder='Type here...' className='px-1 py-2 rounded-lg mt-1' />
+                <input type="text" id='phone' placeholder='Type here...' className='px-1 py-2 rounded-lg mt-1 text-black' />
               </div>
               <div className='flex flex-col mt-2'>
                 <label htmlFor="email">Email:</label>
-                <input type="text" id='email' placeholder='Type here...' className='px-1 py-2 rounded-lg mt-1' />
+                <input type="text" id='email' placeholder='Type here...' className='px-1 py-2 rounded-lg mt-1 text-black' />
               </div>
               <div className='flex justify-end mt-6'>
-                <button className='bg-white text-gray-500 w-44 py-2 rounded-lg hover:bg-gray-500 hover:text-white' type='submit'>Submit</button>
+                <button className='bg-white text-gray-500 w-44 py-2 rounded-lg hover:bg-gray-500 hover:text-white'>Submit</button>
               </div>
             </form>
           </div>
