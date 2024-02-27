@@ -1,6 +1,7 @@
 "use client"
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Hero = () => {
     const [placeholder, setPlaceholder] = useState('')
@@ -288,7 +289,9 @@ const Hero = () => {
                     </div>
 
                 </div>
-                <button className="text-white px-8 py-3 rounded-3xl bg-[#03E2E1] hover:bg-[#61b4b4]">Get Started {'->'}</button>
+                <Link href='/signup'>
+                    <button className="text-white px-8 py-3 rounded-3xl bg-[#03E2E1] hover:bg-[#61b4b4]">Get Started {'->'}</button>
+                </Link>
                 <h3 className="mt-2 font-semibold">14 Day Free Trial Plans Starting at $97/Months</h3>
             </div>
 

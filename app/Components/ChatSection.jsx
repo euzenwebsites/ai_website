@@ -40,9 +40,6 @@ const ChatSection = () => (
         </div>
       </div>
     </div>
-    {/* <button className='mt-8 px-6 py-3 bg-[#04E1E1] text-black font-extrabold text-2xl rounded-xl'>
-      Try It Free<ArrowRight /> */}
-    {/* </button> */}
     <TryFree customClass="mt-8" />
   </div>
 )
