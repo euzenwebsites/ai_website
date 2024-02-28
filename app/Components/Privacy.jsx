@@ -39,9 +39,7 @@ import React from 'react'
     </div>
 ) */}
 const Privacy = () => (
-    <>
-        <iframe className='w-screen h-screen' src="https://app.termly.io/document/privacy-policy/bf5d0038-76f9-47db-a47d-1d4ebb45365e#infominors" title="W3Schools Free Online Web Tutorials"></iframe>
-    </>
+    <iframe className='w-screen h-screen' src="https://app.termly.io/document/privacy-policy/bf5d0038-76f9-47db-a47d-1d4ebb45365e#infominors" title="W3Schools Free Online Web Tutorials"></iframe>
 )
 export default Privacy
 

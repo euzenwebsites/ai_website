@@ -16,8 +16,12 @@ const Footer = () => (
                 <p>Privacy And California Privacy Rights</p>
             </Link>
             <p>Cookie Policy</p>
-            <p>Terms Of Use</p>
-            <p>Disclaimer</p>
+            <Link href="/termsOfUse">
+                <p>Terms Of Use</p>
+            </Link>
+            <Link href="/disclaimer">
+                <p>Disclaimer</p>
+            </Link>
             <Image width={60} height={60} src="/footerimg1.png" alt="" />
         </div>
 
