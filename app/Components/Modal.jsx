@@ -76,7 +76,7 @@ export default function TransitionsModal({ customClass }) {
                                                         >
                                                             <RadioButtonChecked fontSize='small' color='primary' /> Toolbelts.AI <span className='text-sm font-extrabold'> 10 Day Free Trial</span>
                                                         </th>
-                                                        {Array(1, "Free for 10 days then $497/mo").map((val, i) => <TDCmp val={val} key={i} />)}
+                                                        {Array(1, "Free for 10 days then $497/mo").map((val, i) => <TDCmp className="sm:text-left pl-0 sm:pl-8 text-center" val={val} key={i} />)}
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -113,18 +113,18 @@ export default function TransitionsModal({ customClass }) {
                                                     </tr>
                                                 </tfoot>
                                             </table>
-                                            <div className="flex mt-px w-full justify-between">
-                                                <div onClick={() => setOrderMethod(true)} className={`w-[49.5%] h-16 rounded-lg border-2 cursor-pointer ${orderMethod ? "border-[#1471A8]" : "border-gray-300"} flex flex-col justify-center px-2`}>
+                                            <div className="flex flex-col sm:flex-row mt-px w-full gap-2 sm:gap-0 sm:justify-between">
+                                                <div onClick={() => setOrderMethod(true)} className={`sm:w-[49.5%] h-16 rounded-lg border-2 cursor-pointer ${orderMethod ? "border-[#1471A8]" : "border-gray-300"} flex flex-col justify-center px-2`}>
                                                     {!orderMethod ? <Image alt='cardIcon' width={40} height={40} src='/cardIcon.png' /> : <Image alt='cardIcon' width={40} height={40} src='/cardIconActive.png' />}
                                                     <p className={`${orderMethod ? "text-[#1471A8]" : "text-gray-400"} pl-1 font-semibold text-sm`}>Card</p>
                                                 </div>
-                                                <div onClick={() => setOrderMethod(false)} className={`w-[49.5%] h-16 rounded-lg border-2 cursor-pointer ${!orderMethod ? "border-[#1471A8]" : "border-gray-300"} flex flex-col justify-center px-2`}>
+                                                <div onClick={() => setOrderMethod(false)} className={`sm:w-[49.5%] h-16 rounded-lg border-2 cursor-pointer ${!orderMethod ? "border-[#1471A8]" : "border-gray-300"} flex flex-col justify-center px-2`}>
                                                     {orderMethod ? <Image alt='gPay' width={60} height={10} src='/gPay.png' /> : <Image alt='gPay' width={60} height={10} src='/gPayActive.png' />}
                                                     <p className={`${!orderMethod ? "text-[#1471A8]" : "text-gray-400"} pl-1 font-semibold text-sm`}>Google Pay</p>
                                                 </div>
                                             </div>
                                             <div className="mt-2">
-                                                <Label id="cardNumber" label="Card number" />\
+                                                <Label id="cardNumber" label="Card number" />
                                                 <div className='w-full flex items-center justify-between border-gray-300 border py-3 px-3'>
                                                     <input type="number" className='w-[49%] sm:w-[69%] border-none outline-none' placeholder='1234 1234 1234 1234' maxLength={12} id='cardNumber' />
                                                     <div className='sm:w-[29%] w-[49%] flex items-center justify-end gap-0'>
@@ -132,9 +132,9 @@ export default function TransitionsModal({ customClass }) {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div className="flex w-full justify-between mt-2">
+                                            <div className="flex flex-col sm:flex-row w-full gap-2 sm:gap-0 sm:justify-between mt-2">
                                                 <InputLable id="expiration" label="Expiration" placeholder="MM / YY" />
-                                                <div className='flex flex-col w-[49.5%]'>
+                                                <div className='flex flex-col sm:w-[49.5%]'>
                                                     <Label id="CVC" label="CVC" />
                                                     <div className='w-full flex items-center border-gray-300 border p-2'>
                                                         <input type="number" id="CVC" className='w-[85%] border-none outline-none' placeholder='CVC' />
@@ -142,8 +142,8 @@ export default function TransitionsModal({ customClass }) {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div className="flex w-full justify-between mt-2">
-                                                <div className='flex flex-col w-[49.5%]'>
+                                            <div className="flex flex-col sm:flex-row w-full justify-between mt-2">
+                                                <div className='flex flex-col sm:w-[49.5%]'>
                                                     <Label id="Country" label="Country" />
                                                     <select id='Country' className='w-full border-gray-300 border p-2 outline-none'>
                                                         {Array("United States", "United Kingdom", "Canada", "Iran").map((val, i) => <option value={val} key={i}>{val}</option>)}
@@ -152,7 +152,7 @@ export default function TransitionsModal({ customClass }) {
                                                 <InputLable id="ZIP" label="ZIP" placeholder="12345" />
                                             </div>
                                             <div className="mt-10 flex gap-3 items-start text-sm">
-                                                <input type="checkbox" className='mt-2' />
+                                                <input  type="checkbox" className='mt-2' />
                                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint adipisci repellat aut ipsa asperiores. Eos, sunt quam quas quasi, rem dolores maiores eaque hic optio tenetur facilis maxime autem ad? Neque rem corporis repellat .</p>
                                             </div>
                                             <button className='w-full flex items-center my-2 gap-1 justify-center h-12 rounded-lg text-white bg-[#8A8A8A] text-base'> <ShoppingCart /> Begin Free Trial</button>
@@ -183,7 +183,7 @@ const Divider = ({ h3, p, customClass }) => (
 )
 
 const InputLable = ({ id, label, placeholder }) => (
-    <div className='flex flex-col w-[49.5%]'>
+    <div className='flex flex-col sm:w-[49.5%]'>
         <Label id={id} label={label} />
         <input type="number" id={id} className='w-full border-gray-300 border p-2 outline-none' placeholder={placeholder} />
     </div>
