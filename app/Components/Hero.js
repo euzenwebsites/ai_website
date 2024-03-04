@@ -145,7 +145,7 @@ const Hero = () => {
                         </div>
                     </div>
                 </div>
-                <Image width={160} height={160} alt="aiVideo" src={'/aiVideo.gif'} className={`xl:h-60 h-40 w-40 xl:w-60 absolute bottom-[-10px] xl:right-[410px] before2xl:bottom-[-40px] afterxl:right-[440px]  xl:bottom-[-50px] right-[328px] transition-all afterlg:right-[355px] before2xl:right-[470px] before2xlagin:right-[530px] before2xlagin:bottom-[-15px] ${toggleImg && 'z-50 bottom-[-5px]'} `} />
+                <Image width={160} height={160} alt="aiVideo" src={'/aiVideo.gif'} className={` xl:h-60 h-40 w-40 xl:w-60 absolute bottom-[-10px] xl:right-[410px] before2xl:bottom-[-40px] afterxl:right-[440px]  xl:bottom-[-50px] right-[328px] transition-all afterlg:right-[355px] before2xl:right-[470px] before2xlagin:right-[530px] before2xlagin:bottom-[-15px] ${toggleImg && 'z-50 bottom-[-5px]'} `} />
 
                 <Image width={160} height={160} alt="aiBanner" src="/aibanner.png" className={`xl:h-64 h-44 w-44 xl:w-64 absolute bottom-[-10px] xl:right-[400px]  afterxl:right-[430px] xl:bottom-[-50px] right-[320px] transition-all afterlg:right-[348px] before2xl:right-[460px] z-0 before2xl:bottom-[-43px] before2xlagin:right-[520px] before2xlagin:bottom-[-15px]`} />
 
@@ -164,7 +164,7 @@ const Hero = () => {
                             }
                         }} >
                             {condition ? (<>
-                                <Image src="/contact1.png" width={80} height={80} className={`w-20 object-contain h-36 absolute z-50 ${isHovered && 'scale-125 z-50'}`} alt="contact" />
+                                <Image src="/contact1.png" width={80} height={80} className={`transition-all duration-1000 w-20 object-contain h-36 absolute z-50 ${isHovered && 'scale-125 z-50'}`} alt="contact" />
                                 {isHovered &&
                                     <Image src="/glowLens.png" alt="glow" width={128} height={128} className={`object-contain w-32 h-32 absolute top-[0] left-[0] z-0 rotateImg ${isHovered1 && "z-0"}`} />
                                 }

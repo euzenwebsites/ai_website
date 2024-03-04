@@ -22,7 +22,7 @@ const Header = ({ custom1, custom2 }) => {
                 <div className="flex items-center justify-center">
                     <div
                         onClick={() => setOpen(!open)}
-                        className="absolute right-8 top-9 text-gray-500 cursor-pointer lg:hidden w-7 h-7"
+                        className="absolute right-8 top-7 text-gray-500 cursor-pointer lg:hidden w-7 h-7"
                     >
                         {open ? <Close /> : <Menu />}
                     </div>
