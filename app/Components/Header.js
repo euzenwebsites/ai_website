@@ -5,13 +5,23 @@ import { Close, KeyboardArrowDown, } from "@mui/icons-material";
 import Link from "next/link";
 import Image from "next/image";
 import { Avatar, Button, Menu, MenuItem } from "@mui/material";
-import { useSession } from "next-auth/react";
+import MenuIcon from '@mui/icons-material/Menu';
+import { signOut, useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
+import Loader from "./Loader";
 
 const Header = ({ custom1, custom2 }) => {
     const [userAuthenticated, setUserAuthenticated] = useState('')
     useEffect(() => {
         setUserAuthenticated(localStorage.getItem('user'))
     }, []);
+    const [loading, setLoading] = useState(false)
+    const logOut = () => {
+        setLoading(true)
+        localStorage.clear();
+        signOut()
+        setLoading(false)
+    }
     let [open, setOpen] = useState(false);
     const [anchorEl, setAnchorEl] = useState(null);
     const open2 = Boolean(anchorEl);
@@ -40,7 +50,7 @@ const Header = ({ custom1, custom2 }) => {
                         onClick={() => setOpen(!open)}
                         className="absolute right-8 top-7 text-gray-500 cursor-pointer lg:hidden w-7 h-7"
                     >
-                        {open ? <Close /> : <Menu />}
+                        {open ? <Close /> : <MenuIcon />}
                     </div>
                 </div>
                 <ul
@@ -84,7 +94,7 @@ const Header = ({ custom1, custom2 }) => {
                                 'aria-labelledby': 'basic-button',
                             }}
                         >
-                            <MenuItem onClick={handleClose}>Logout</MenuItem>
+                            {loading ? <Loader /> : <MenuItem onClick={logOut}>Logout</MenuItem>}
                         </Menu>
                     </div>
                     }

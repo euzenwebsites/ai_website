@@ -3,7 +3,7 @@ import Stack from '@mui/material/Stack';
 import CircularProgress from '@mui/material/CircularProgress';
 
 const Loader = () => (
-    <Stack sx={{ color: 'grey.500', position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }} spacing={2} direction="row">
+    <Stack sx={{ color: 'grey.500', position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '100vw', height: '100vh' }} spacing={2} direction="row">
         <CircularProgress color="primary" sx={{
             height: '400px',
             width: '400px',
