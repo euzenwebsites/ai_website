@@ -16,13 +16,13 @@ const GoogleSignInButton = () => {
             setUserName(session?.user?.name)
             setUserEmail(session?.user?.email)
             localStorage.setItem('user', JSON.stringify(session?.user))
+            axios.post('/googleusers', {
+                email: userEmail,
+                name: userName
+            })
             if (userName !== '') {
                 console.log(userName)
                 console.log(userEmail)
-                axios.post('/googleusers', {
-                    email: userEmail,
-                    name: userName
-                })
                 router.push('/')
             }
 
