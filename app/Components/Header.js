@@ -1,13 +1,28 @@
 "use client"
 
-import React, { useState } from "react";
-import { Close, KeyboardArrowDown, Menu } from "@mui/icons-material";
+import React, { useEffect, useState } from "react";
+import { Close, KeyboardArrowDown, } from "@mui/icons-material";
 import Link from "next/link";
 import Image from "next/image";
-import { Avatar, MenuItem } from "@mui/material";
+import { Avatar, Button, Menu, MenuItem } from "@mui/material";
+import { useSession } from "next-auth/react";
 
 const Header = ({ custom1, custom2 }) => {
+    const [userAuthenticated, setUserAuthenticated] = useState('')
+    useEffect(() => {
+        setUserAuthenticated(localStorage.getItem('user'))
+    }, []);
     let [open, setOpen] = useState(false);
+    const [anchorEl, setAnchorEl] = useState(null);
+    const open2 = Boolean(anchorEl);
+    const handleClick = (event) => {
+        setAnchorEl(event.currentTarget);
+    };
+    const handleClose = () => {
+        setAnchorEl(null);
+    };
+    const sesion = useSession()
+    console.log(sesion?.data?.user?.image);
 
     return (
         <div className={`shadow w-full fixed top-0 left-0 z-[100] ${custom1}`}>
@@ -41,17 +56,37 @@ const Header = ({ custom1, custom2 }) => {
                         </p>
                     </li>
                     <li className="lg:my-0 mt-5 lg:mt-0 lg:ml-20 cursor-pointer">
-                        {!localStorage.getItem("user") ? <Link href='/login' className={` hover:text-[#1A567D] duration-500 ${custom2}`}>
+                        {!userAuthenticated ? <Link href='/login' className={` hover:text-[#1A567D] duration-500 ${custom2}`}>
                             Log In
-                        </Link> : <p> {JSON.parse(localStorage.getItem("user"))?.name || JSON.parse(localStorage.getItem("user"))?.company_name} </p>
+                        </Link> : <p> {sesion?.data?.user?.name || JSON.parse(localStorage.getItem("user"))?.company_name} </p>
                         }
                     </li>
 
-                    {!localStorage.getItem("user") ? <Link href="/signup"> <button className="text-white lg:my-0 my-5 lg:mt-0 lg:ml-8 px-6 py-3 rounded-3xl bg-[#03E2E1] hover:bg-[#61b4b4]">
+                    {!userAuthenticated ? <Link href="/signup"> <button className="text-white lg:my-0 my-5 lg:mt-0 lg:ml-8 px-6 py-3 rounded-3xl bg-[#03E2E1] hover:bg-[#61b4b4]">
                         Get Started {'->'}
-                    </button></Link> : <Avatar className="md:mt-0 mt-3 ml-0 md:ml-3" alt="user" src={JSON.parse(localStorage.getItem("user"))?.image || "https://cdn.vectorstock.com/i/preview-1x/08/19/gray-photo-placeholder-icon-design-ui-vector-35850819.jpg"} >
-                        <MenuItem>Log out</MenuItem>
-                    </Avatar>
+                    </button></Link> : <div>
+                        <Button id="basic-button" className="w-fit"
+                            aria-controls={open2 ? 'basic-menu' : undefined}
+                            aria-haspopup="true"
+                            aria-expanded={open2 ? 'true' : undefined}
+                            onClick={handleClick}>
+                            <Avatar aria-controls={open2 ? 'basic-menu' : undefined}
+                                aria-haspopup="true"
+                                aria-expanded={open2 ? 'true' : undefined}
+                                onClick={handleClick} className="md:mt-0 mt-3 ml-0 md:ml-3" alt="user" src={sesion?.data?.user?.image || "https://cdn.vectorstock.com/i/preview-1x/08/19/gray-photo-placeholder-icon-design-ui-vector-35850819.jpg"} />
+                        </Button>
+                        <Menu
+                            id="basic-menu"
+                            anchorEl={anchorEl}
+                            open={open2}
+                            onClose={handleClose}
+                            MenuListProps={{
+                                'aria-labelledby': 'basic-button',
+                            }}
+                        >
+                            <MenuItem onClick={handleClose}>Logout</MenuItem>
+                        </Menu>
+                    </div>
                     }
 
                 </ul>
