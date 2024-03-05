@@ -4,15 +4,18 @@ import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { signIn, useSession } from 'next-auth/react'
 import axios from '../axios'
+import { useRouter } from 'next/navigation'
 
 const GoogleSignInButton = () => {
     const { data: session, status } = useSession()
     const [userName, setUserName] = useState('')
     const [userEmail, setUserEmail] = useState('')
+    const router = useRouter()
     useEffect(() => {
         if (status === 'authenticated') {
             setUserName(session?.user?.name)
             setUserEmail(session?.user?.email)
+            localStorage.setItem('user', JSON.stringify(session?.user))
             if (userName !== '') {
                 console.log(userName)
                 console.log(userEmail)
@@ -20,6 +23,7 @@ const GoogleSignInButton = () => {
                     email: userEmail,
                     name: userName
                 })
+                router.push('/')
             }
 
         }

@@ -164,7 +164,7 @@ const Hero = () => {
                             }
                         }} >
                             {condition ? (<>
-                                <Image src="/contact1.png" width={80} height={80} className={`transition-all duration-1000 w-20 object-contain h-36 absolute z-50 ${isHovered && 'scale-125 z-50'}`} alt="contact" />
+                                <Image src="/contact1.png" width={80} height={80} className={`transition-all duration-500 w-20 object-contain h-36 absolute z-50 ${isHovered && 'scale-125 z-50'}`} alt="contact" />
                                 {isHovered &&
                                     <Image src="/glowLens.png" alt="glow" width={128} height={128} className={`object-contain w-32 h-32 absolute top-[0] left-[0] z-0 rotateImg ${isHovered1 && "z-0"}`} />
                                 }
@@ -182,7 +182,7 @@ const Hero = () => {
                             }
                         }}>
                             {condition1 ? (<>
-                                <Image src="/omni.png" width={80} height={80} className={`w-20 object-contain h-36 absolute z-50 ${isHovered1 && 'scale-150 z-50'}`} alt="contact" />
+                                <Image src="/omni.png" width={80} height={80} className={`transition-all duration-500 w-20 object-contain h-36 absolute z-50 ${isHovered1 && 'scale-150 z-50'}`} alt="contact" />
                                 {isHovered1 && <Image width={128} height={128} src="/glowLens.png" alt="glow" className={`object-contain w-32 h-32 absolute top-[0] left-[0] z-0 rotateImg ${isHovered1 && "z-0"}`} />}
                             </>) : (<Image width={120} height={120} alt="omni" src='/omniSelected.png' />)}
                         </div>
@@ -198,7 +198,7 @@ const Hero = () => {
                             }
                         }} >
                             {condition2 ? (<>
-                                <Image src="/scheduling.png" width={80} height={80} className={`w-20 object-contain h-36 absolute z-50 ${isHovered2 && 'scale-125 z-50'}`} alt="scheduling" />
+                                <Image src="/scheduling.png" width={80} height={80} className={`transition-all duration-500 w-20 object-contain h-36 absolute z-50 ${isHovered2 && 'scale-125 z-50'}`} alt="scheduling" />
                                 {isHovered2 && <Image src="/glowLens.png" width={128} height={128} alt="glow" className={`object-contain w-32 h-32 absolute top-[0] left-[0] z-0 rotateImg ${isHovered2 && "z-0"}`} />}
                             </>) : (<Image width={120} height={120} alt="scheduling" src='/schedulingSelected.png' />)}
                         </div>
@@ -214,7 +214,7 @@ const Hero = () => {
                             }
                         }} >
                             {condition3 ? (<>
-                                <Image src="/chatbots.png" width={80} height={80} className={`w-20 object-contain h-36 absolute z-50 ${isHovered3 && 'scale-150 z-50'}`} alt="chatbots" />
+                                <Image src="/chatbots.png" width={80} height={80} className={`transition-all duration-500 w-20 object-contain h-36 absolute z-50 ${isHovered3 && 'scale-150 z-50'}`} alt="chatbots" />
                                 {isHovered3 && <Image src="/glowLens.png" alt="glow" width={128} height={128} className={`object-contain w-32 h-32 absolute top-[0] left-[0] z-0 rotateImg ${isHovered3 && "z-0"}`} />}
                             </>) : (<Image width={120} height={120} alt="chatbots" src='/chatbotsSelected.png' />)}
                         </div>
@@ -231,7 +231,7 @@ const Hero = () => {
                             }
                         }} >
                             {condition4 ? (<>
-                                <Image src="/signature.png" width={80} height={80} className={`w-20 object-contain h-36 absolute z-50 ${isHovered4 && 'scale-125 z-50'}`} alt="signature" />
+                                <Image src="/signature.png" width={80} height={80} className={`transition-all duration-500 w-20 object-contain h-36 absolute z-50 ${isHovered4 && 'scale-125 z-50'}`} alt="signature" />
                                 {isHovered4 && <Image src="/glowLens.png" alt="glow" width={128} height={128} className={`object-contain w-32 h-32 absolute top-[0] left-[0] z-0 rotateImg ${isHovered4 && "z-0"}`} />}
                             </>) : (<Image width={120} height={120} alt="signature" src='/signatureSelected.png' />)}
                         </div>
@@ -247,7 +247,7 @@ const Hero = () => {
                             }
                         }} >
                             {condition5 ? (<>
-                                <Image src="/secure.png" width={80} height={80} className={`w-20 object-contain h-36 absolute z-50 ${isHovered5 && 'scale-150 z-50'}`} alt="secure" />
+                                <Image src="/secure.png" width={80} height={80} className={`transition-all duration-500 w-20 object-contain h-36 absolute z-50 ${isHovered5 && 'scale-150 z-50'}`} alt="secure" />
                                 {isHovered5 && <Image src="/glowLens.png" alt="glow" width={128} height={128} className={`object-contain w-32 h-32 absolute top-[0] left-[0] z-0 rotateImg ${isHovered5 && "z-0"}`} />}
                             </>) : (<Image width={120} height={120} alt="secure" src='/secureSelected.png' />)}
                         </div>
@@ -263,7 +263,7 @@ const Hero = () => {
                             }
                         }} >
                             {condition6 ? (<>
-                                <Image src="/learning.png" width={80} height={80} className={`w-20 object-contain h-36 absolute z-50 ${isHovered6 && 'scale-150 z-50'}`} alt="learning" />
+                                <Image src="/learning.png" width={80} height={80} className={`transition-all duration-500 w-20 object-contain h-36 absolute z-50 ${isHovered6 && 'scale-150 z-50'}`} alt="learning" />
                                 {isHovered6 && <Image src="/glowLens.png" alt="glow" width={128} height={128} className={`object-contain w-32 h-32 absolute top-[0] left-[0] z-0 rotateImg ${isHovered6 && "z-0"}`} />}
                             </>) : (<Image width={120} height={120} alt="learning" src='/learningSelected.png' />)}
                         </div>
@@ -279,7 +279,7 @@ const Hero = () => {
                             }
                         }} >
                             {condition7 ? (<>
-                                <Image src="/private1.png" width={80} height={80} className={`w-20 object-contain h-36 absolute z-50 ${isHovered7 && 'scale-150 z-50'}`} alt="private" />
+                                <Image src="/private1.png" width={80} height={80} className={`transition-all duration-500 w-20 object-contain h-36 absolute z-50 ${isHovered7 && 'scale-150 z-50'}`} alt="private" />
                                 {isHovered7 && <Image src="/glowLens.png" alt="glow" width={128} height={128} className={`object-contain w-32 h-32 absolute top-[0] left-[0] z-0 rotateImg ${isHovered7 && "z-0"}`} />}
                             </>) : (<Image width={120} height={120} alt="private" src='/privateSelected.png' />)}
                         </div>

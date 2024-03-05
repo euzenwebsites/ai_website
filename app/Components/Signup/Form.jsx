@@ -15,7 +15,7 @@ const Form = () => {
     const [isAuthenticated, setIsAuthenticated] = useState(true);
     const router = useRouter()
     useEffect(() => {
-        if (localStorage.getItem('token')) {
+        if (localStorage.getItem('user')) {
             setIsAuthenticated(false)
             router.push('/')
         }

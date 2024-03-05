@@ -1,7 +1,6 @@
 "use client"
 
 import React, { useEffect, useState } from 'react'
-import Image from 'next/image'
 import Link from 'next/link'
 import axios from '../../axios'
 import { useFormik } from 'formik'
@@ -15,7 +14,7 @@ const Form = () => {
     const [isAuthenticated, setIsAuthenticated] = useState(true);
     const router = useRouter()
     useEffect(() => {
-        if (localStorage.getItem('token')) {
+        if (localStorage.getItem('user')) {
             setIsAuthenticated(false)
             router.push('/')
         }
