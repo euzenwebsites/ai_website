@@ -87,7 +87,7 @@ const Hero = () => {
         }
     }
     return (
-        <section className="lg:flex hidden flex-col items-center z-0 mt-16 md:px-[100px] sm:px-[40px] px-[10px] w-full">
+        <section className="lg:flex hidden flex-col items-center z-0 mt-16 md:px-[100px] sm:px-[40px] px-[10px] w-full max-w-[1550px]">
             <div className="relative">
                 <div className="lg:h-56 w-full absolute xl:top-[130px] xl:left-6 left-5 top-12 afterlg:top-16 afterxl:top-36">
                     <div className="flex justify-center items-center h-full w-full flex-col">

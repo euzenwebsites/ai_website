@@ -23,9 +23,4 @@ const HeroAlternative = () => (
 
 export default HeroAlternative
 
-const RoundedNoAndP = ({ no, p }) => (
-  <>
-    <span className='rounded-full sm:h-16 h-20 sm:w-16 w-20 bg-black flex items-center text-white justify-center text-3xl mt-3 sm:mt-0'>{no}</span>
-    <p className='text-sm sm:w-[20%]'><span className='font-bold'>Step {no}:</span> {p}</p>
-  </>
-)
+const RoundedNoAndP = ({ no, p }) => <> <span className='rounded-full sm:h-20 h-20 sm:w-20 w-20 bg-black flex items-center text-white justify-center text-4xl font-bold mt-3 sm:mt-0'>{no}</span> <p className='text-sm sm:w-[20%]'><span className='font-bold'>Step {no}:</span> {p}</p> </>

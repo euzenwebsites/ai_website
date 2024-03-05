@@ -3,7 +3,7 @@ import React from 'react'
 import TryFree from './ui/TryFree';
 
 const ChatSection = () => (
-  <div className='md:px-[100px] sm:px-[40px] px-[20px] mt-4 flex justify-center items-center flex-col'>
+  <div className='md:px-[100px] sm:px-[40px] px-[20px] mt-4 flex justify-center items-center flex-col max-w-[1550px]'>
     <h1 className='text-3xl font-bold'>Have Questions? Talk To Our Chatbot!</h1>
     <p className='text-xl'>You Could Have A Live Bot Like This Talking To YOUR Customers In As Little As A Few Minutes From Now!</p>
     <div className='sm:w-[650px] w-fit h-[550px] flex flex-col rounded border'>
