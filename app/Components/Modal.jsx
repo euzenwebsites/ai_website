@@ -5,7 +5,7 @@ import Backdrop from '@mui/material/Backdrop';
 import Modal from '@mui/material/Modal';
 import Fade from '@mui/material/Fade';
 import { TextField } from '@mui/material';
-import { ArrowBack, ArrowRight, CancelSharp, RadioButtonChecked, ShoppingBasket, ShoppingCart } from '@mui/icons-material';
+import { ArrowBack, ArrowRight, CancelSharp, RadioButtonChecked, ShoppingCart } from '@mui/icons-material';
 import Image from 'next/image';
 
 export default function TransitionsModal({ customClass }) {

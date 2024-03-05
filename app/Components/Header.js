@@ -7,7 +7,6 @@ import Image from "next/image";
 import { Avatar, Button, Menu, MenuItem } from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
 import { signOut, useSession } from "next-auth/react";
-import { useRouter } from "next/navigation";
 import Loader from "./Loader";
 
 const Header = ({ custom1, custom2 }) => {
