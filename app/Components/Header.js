@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { Close, KeyboardArrowDown, Menu } from "@mui/icons-material";
 import Link from "next/link";
 import Image from "next/image";
+import { Avatar, MenuItem } from "@mui/material";
 
 const Header = ({ custom1, custom2 }) => {
     let [open, setOpen] = useState(false);
@@ -40,13 +41,19 @@ const Header = ({ custom1, custom2 }) => {
                         </p>
                     </li>
                     <li className="lg:my-0 mt-5 lg:mt-0 lg:ml-20 cursor-pointer">
-                        <Link href='/login' className={` hover:text-[#1A567D] duration-500 ${custom2}`}>
+                        {!localStorage.getItem("user") ? <Link href='/login' className={` hover:text-[#1A567D] duration-500 ${custom2}`}>
                             Log In
-                        </Link>
+                        </Link> : <p> {JSON.parse(localStorage.getItem("user"))?.name || JSON.parse(localStorage.getItem("user"))?.company_name} </p>
+                        }
                     </li>
-                    <Link href="/signup">
-                        <button className="text-white lg:my-0 my-5 lg:mt-0 lg:ml-8 px-6 py-3 rounded-3xl bg-[#03E2E1] hover:bg-[#61b4b4]">Get Started {'->'}</button>
-                    </Link>
+
+                    {!localStorage.getItem("user") ? <Link href="/signup"> <button className="text-white lg:my-0 my-5 lg:mt-0 lg:ml-8 px-6 py-3 rounded-3xl bg-[#03E2E1] hover:bg-[#61b4b4]">
+                        Get Started {'->'}
+                    </button></Link> : <Avatar className="md:mt-0 mt-3 ml-0 md:ml-3" alt="user" src={JSON.parse(localStorage.getItem("user"))?.image || "https://cdn.vectorstock.com/i/preview-1x/08/19/gray-photo-placeholder-icon-design-ui-vector-35850819.jpg"} >
+                        <MenuItem>Log out</MenuItem>
+                    </Avatar>
+                    }
+
                 </ul>
             </div>
         </div>
