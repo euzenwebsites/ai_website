@@ -89,7 +89,7 @@ const Hero = () => {
     return (
         <section className="lg:flex hidden flex-col items-center z-0 mt-16 md:px-[100px] sm:px-[40px] px-[10px] w-full max-w-[1550px]">
             <div className="relative">
-                <div className="lg:h-64 w-full flex justify-center items-center absolute afterlgCustom:top-[80px] before2xlagin:top-[130px] customlg:top-12 top-8">
+                <div className="lg:h-[80%] w-full flex justify-center items-center absolute  afterlgCustom:top-9 top-4 ">
                     <div className="flex justify-center items-center h-full w-full flex-col">
                         <h1 className="text-black before2xlagin:text-5xl text-3xl font-bold text-center"> <span className="text-[#03E2E1]">Every</span> <span className="font-normal">Tool </span>your business <span className="text-[#03E2E1]">Needs</span>,  </h1>
                         <h1 className="text-[#03E2E1] pt-3 text-4xl before2xlagin:text-6xl font-bold text-center">In-One-Place<span className="text-[black!important]">...</span> </h1>
