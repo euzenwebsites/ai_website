@@ -95,7 +95,7 @@ const Hero = () => {
                         <h1 className="text-[#03E2E1] pt-3 text-4xl before2xlagin:text-6xl font-bold text-center">In-One-Place<span className="text-[black!important]">...</span> </h1>
                     </div>
                 </div>
-                <Image src={'/ring.png'} width={1400} height={900} alt="ring" className="w-[100%] h-[100%] flex justify-center items-center object-contain p-0 " />
+                <Image src={'/ring1.png'} width={1400} height={900} alt="ring" className="w-[100%] h-[100%] flex justify-center items-center object-contain p-0 " />
                 {/* {!multiple && ( */}
                 <div className="flex justify-center w-full">
                     <div className=" w-[80%] absolute bottom-16 h-fit flex justify-between items-end">
@@ -154,7 +154,7 @@ const Hero = () => {
 
             <div className="mt-12 flex flex-col justify-center items-center w-full">
                 <h1 className="text-2xl font-semibold">How would you like to grow your business?</h1>
-                <div className='w-[100%] flex gap-10 xl:gap-0 afterlg:justify-start afterlg:gap-[75px] xl:justify-between justify-start items-start flex-wrap'>
+                <div className='mt-10 w-[100%] flex gap-10 xl:gap-0 afterlg:justify-start afterlg:gap-[75px] xl:justify-between justify-start items-start flex-wrap'>
 
                     <div className={`flex justify-center cursor-pointer items-center flex-col w-[120px]`}>
                         <div onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} className={`rounded-full bgGlass mainDiv  w-[120px] h-[120px] flex items-center justify-center overflow-hidden relative`} onClick={() => {
