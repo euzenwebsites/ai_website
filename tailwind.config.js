@@ -20,7 +20,17 @@ module.exports = {
 
       'lg': '1024px',
 
+      'customlg': '1076px',
+
       'afterlg': '1100px',
+
+      'afterlgCustom': '1136px',
+
+      'customAfterlg': '1153px',
+
+      'customAfterlgCustom': '1189px',
+
+      'customXl': '1236px',
 
       'xl': '1280px',
 
