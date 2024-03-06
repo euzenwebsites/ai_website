@@ -5,7 +5,6 @@ import Header from "./Components/Header";
 import Hero from "./Components/Hero";
 import HeroAlternative from "./Components/HeroAlternative";
 import Section2 from "./Components/Section2";
-import ChatFixed from "./Components/chatFixed";
 
 export default function Home() {
   return (
@@ -14,7 +13,6 @@ export default function Home() {
         <Header />
         <Hero />
         <HeroAlternative />
-        {/* <ChatFixed /> */}
         <Cookie />
         <Section2 />
         <ChatSection />
