@@ -98,17 +98,17 @@ const Hero = () => {
                 <Image src={'/ring1.png'} width={1400} height={900} alt="ring" className="w-[100%] h-[100%] flex justify-center items-center object-contain p-0 " />
                 {/* {!multiple && ( */}
                 <div className="flex justify-center w-full">
-                    <div className=" w-[80%] absolute bottom-16 h-fit flex justify-between items-end">
+                    <div className=" w-[80%] absolute bottom-16 h-fit flex justify-between items-end z-50">
                         <div className="flex gap-8 items-end">
-                            <div className={`w-[140px] h-[140px] ${placeholder !== "" ? "cursor-pointer bg-transparent" : 'cursor-auto'} rounded-full before2xl:h-36 before2xl:w-36 lg:w-28 lg:h-28 bgGlass -mb-1 xl:mb-7`}>
-                                {placeholder && <Image alt={placeholder} src={placeholder} height={140} width={140} onClick={() => {
+                            <div className={`w-[140px] h-[140px] rounded-full before2xl:h-36 before2xl:w-36 lg:w-28 lg:h-28 bgGlass -mb-1 xl:mb-7`}>
+                                {placeholder && <Image className="cursor-pointer z-50" alt={placeholder} src={placeholder} height={140} width={140} onClick={() => {
                                     toggleConditon(placeholder);
                                     setPlaceholder('');
                                     setImageArr(ImageArr.filter(val => val !== placeholder))
                                 }} />}
                             </div>
-                            <div className={`w-[140px] h-[140px] p-2 ${placeholder1 !== "" ? "cursor-pointer bg-transparent" : 'cursor-auto'} rounded-full before2xl:h-36 before2xl:w-36 lg:w-28 lg:h-28 bgGlass -mb-10 xl:-mb-5`}>
-                                {placeholder1 && <Image alt={placeholder1} src={placeholder1} height={140} width={140} onClick={() => {
+                            <div className={`w-[140px] h-[140px] p-2 rounded-full before2xl:h-36 before2xl:w-36 lg:w-28 lg:h-28 bgGlass -mb-10 xl:-mb-5`}>
+                                {placeholder1 && <Image className="cursor-pointer z-50" alt={placeholder1} src={placeholder1} height={140} width={140} onClick={() => {
                                     toggleConditon(placeholder1);
                                     setPlaceholder1('');
                                     setImageArr(ImageArr.filter(val => val !== placeholder1))
@@ -116,15 +116,15 @@ const Hero = () => {
                             </div>
                         </div>
                         <div className="flex gap-8 items-end">
-                            <div className={`w-[140px] h-[140px] p-2 ${placeholder2 !== "" ? "cursor-pointer bg-transparent" : 'cursor-auto'} rounded-full before2xl:h-36 before2xl:w-36 lg:w-28 lg:h-28 bgGlass -mb-10 xl:-mb-5`}>
-                                {placeholder2 && <Image alt={placeholder2} src={placeholder2} height={140} width={140} onClick={() => {
+                            <div className={`w-[140px] h-[140px] p-2 rounded-full before2xl:h-36 before2xl:w-36 lg:w-28 lg:h-28 bgGlass -mb-10 xl:-mb-5`}>
+                                {placeholder2 && <Image className="cursor-pointer z-50" alt={placeholder2} src={placeholder2} height={140} width={140} onClick={() => {
                                     toggleConditon(placeholder2);
                                     setPlaceholder2('');
                                     setImageArr(ImageArr.filter(val => val !== placeholder2))
                                 }} />}
                             </div>
-                            <div className={`w-[140px] h-[140px] p-2 ${placeholder3 !== "" ? "cursor-pointer bg-transparent" : 'cursor-auto'} rounded-full before2xl:h-36 before2xl:w-36 lg:w-28 lg:h-28 bgGlass -mb-1 xl:mb-7`}>
-                                {placeholder3 && <Image alt={placeholder3} src={placeholder3} height={140} width={140} onClick={() => {
+                            <div className={`w-[140px] h-[140px] p-2 rounded-full before2xl:h-36 before2xl:w-36 lg:w-28 lg:h-28 bgGlass -mb-1 xl:mb-7`}>
+                                {placeholder3 && <Image className="cursor-pointer z-50" alt={placeholder3} src={placeholder3} height={140} width={140} onClick={() => {
                                     toggleConditon(placeholder3);
                                     setPlaceholder3('');
                                     setImageArr(ImageArr.filter(val => val !== placeholder3))
@@ -142,13 +142,15 @@ const Hero = () => {
                         </div>
                     </div>
                 </div>
-                <div className="flex justify-center w-[103%] absolute bottom-0 ">
-                    <Image width={160} height={160} alt="aiBanner" src="/aibanner.png" className={`before2xl:h-64 h-44 w-44 before2xl:w-64 object-contain z-10`} />
-                    {/* */}
-                </div>
-                <div className="flex justify-center w-[103%] absolute bottom-1">
-                    <Image width={160} height={160} alt="aiVideo" src={'/aiVideo.gif'} className={`z-0 before2xl:h-60 h-40 w-40 before2xl:w-60 object-contain ${toggleImg && 'z-50'}`} />
-                    {/*  */}
+                <div className="z-0">
+                    <div className="flex justify-center w-[103%] absolute bottom-0">
+                        <Image width={160} height={160} alt="aiBanner" src="/aibanner.png" className={`before2xl:h-64 h-44 w-44 before2xl:w-64 object-contain z-10`} />
+                        {/* */}
+                    </div>
+                    <div className="flex justify-center w-[103%] absolute bottom-1">
+                        <Image width={160} height={160} alt="aiVideo" src={'/aiVideo.gif'} className={`z-0 before2xl:h-60 h-40 w-40 before2xl:w-60 object-contain ${toggleImg && 'z-50'}`} />
+                        {/*  */}
+                    </div>
                 </div>
 
             </div>
