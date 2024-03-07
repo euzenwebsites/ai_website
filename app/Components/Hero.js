@@ -90,7 +90,7 @@ const Hero = () => {
         <section className="lg:flex hidden flex-col items-center z-0 mt-16 md:px-[100px] sm:px-[40px] px-[10px] w-full max-w-[1550px]">
             <div className="relative">
                 <div className="lg:h-[80%] w-full flex justify-center items-center absolute  afterlgCustom:top-9 top-4 ">
-                    <div className="flex justify-center items-center h-full w-full flex-col">
+                    <div className="flex justify-center items-center w-[full] flex-col">
                         <h1 className="text-black before2xlagin:text-5xl text-3xl font-bold text-center"> <span className="text-[#03E2E1]">Every</span> <span className="font-normal">Tool </span>your business <span className="text-[#03E2E1]">Needs</span>,  </h1>
                         <h1 className="text-[#03E2E1] pt-3 text-4xl before2xlagin:text-6xl font-bold text-center">In-One-Place<span className="text-[black!important]">...</span> </h1>
                     </div>
@@ -142,11 +142,13 @@ const Hero = () => {
                         </div>
                     </div>
                 </div>
-                <div className="flex justify-center w-full absolute bottom-0">
-                    <Image width={160} height={160} alt="aiBanner" src="/aibanner.png" className={`before2xl:h-64 h-44 w-44 before2xl:w-64 z-10`} />
+                <div className="flex justify-center w-[103%] absolute bottom-0 ">
+                    <Image width={160} height={160} alt="aiBanner" src="/aibanner.png" className={`before2xl:h-64 h-44 w-44 before2xl:w-64 object-contain z-10`} />
+                    {/* */}
                 </div>
-                <div className="flex justify-center w-full absolute bottom-1">
-                    <Image width={160} height={160} alt="aiVideo" src={'/aiVideo.gif'} className={`z-0 before2xl:h-60 h-40 w-40 before2xl:w-60 ${toggleImg && 'z-50'}`} />
+                <div className="flex justify-center w-[103%] absolute bottom-1">
+                    <Image width={160} height={160} alt="aiVideo" src={'/aiVideo.gif'} className={`z-0 before2xl:h-60 h-40 w-40 before2xl:w-60 object-contain ${toggleImg && 'z-50'}`} />
+                    {/*  */}
                 </div>
 
             </div>
