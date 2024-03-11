@@ -9,6 +9,8 @@ const Hero = () => {
     const [placeholder2, setPlaceholder2] = useState('')
     const [placeholder3, setPlaceholder3] = useState('')
     const [placeholder4, setPlaceholder4] = useState('')
+    const [placeholder5, setPlaceholder5] = useState('')
+    const [placeholder6, setPlaceholder6] = useState('')
     const [condition, setCondition] = useState(true)
     const [condition1, setCondition1] = useState(true)
     const [condition2, setCondition2] = useState(true)
@@ -29,7 +31,7 @@ const Hero = () => {
     let [ImageArr, setImageArr] = useState([]);
 
     const toggleConditon = (src) => {
-        if (src !== placeholder && src !== placeholder1 && src !== placeholder2 && src !== placeholder3 && src !== placeholder4) {
+        if (src !== placeholder && src !== placeholder1 && src !== placeholder2 && src !== placeholder3 && src !== placeholder4 && src !== placeholder5 && src !== placeholder6) {
             if (placeholder === '') {
                 setImageArr([...ImageArr, src])
                 setPlaceholder(src)
@@ -49,7 +51,16 @@ const Hero = () => {
             } else if (placeholder4 === '') {
                 setImageArr([...ImageArr, src])
                 setPlaceholder4(src)
-                if (ImageArr.length === 4) {
+                return
+            } else if (placeholder5 === '') {
+                setImageArr([...ImageArr, src])
+                setPlaceholder5(src)
+                return
+
+            } else if (placeholder6 === "") {
+                setImageArr([...ImageArr, src])
+                setPlaceholder6(src)
+                if (ImageArr.length === 6) {
                     setToggleImg(true)
                     setTimeout(() => {
                         setToggleImg(false)
@@ -98,46 +109,60 @@ const Hero = () => {
                 <Image src={'/ring1.png'} width={1400} height={900} alt="ring" className="w-[100%] h-[100%] flex justify-center items-center object-contain p-0 " />
                 {/* {!multiple && ( */}
                 <div className="flex justify-center w-full">
-                    <div className=" w-[80%] absolute bottom-16 h-fit flex justify-between items-end z-50">
-                        <div className="flex gap-8 items-end">
-                            <div className={`w-[140px] h-[140px] rounded-full before2xl:h-36 before2xl:w-36 lg:w-28 lg:h-28 bgGlass -mb-1 xl:mb-7`}>
+                    <div className=" w-[90%] absolute bottom-16 xl:left-20 h-fit flex justify-between items-end z-50">
+                        <div className="flex items-end">
+                            <div className={`w-[140px] h-[140px] rounded-full before2xl:h-36 before2xl:w-36 lg:w-28 lg:h-28 bgGlass mb-10 xl:mb-12 xl:ml-3`}>
                                 {placeholder && <Image className="cursor-pointer z-50" alt={placeholder} src={placeholder} height={140} width={140} onClick={() => {
                                     toggleConditon(placeholder);
                                     setPlaceholder('');
                                     setImageArr(ImageArr.filter(val => val !== placeholder))
                                 }} />}
                             </div>
-                            <div className={`w-[140px] h-[140px] p-2 rounded-full before2xl:h-36 before2xl:w-36 lg:w-28 lg:h-28 bgGlass -mb-10 xl:-mb-5`}>
+                            <div className={`w-[140px] h-[140px] p-2 rounded-full before2xl:h-36 before2xl:w-36 lg:w-28 lg:h-28 bgGlass -mb-1 xl:-mb-1`}>
                                 {placeholder1 && <Image className="cursor-pointer z-50" alt={placeholder1} src={placeholder1} height={140} width={140} onClick={() => {
                                     toggleConditon(placeholder1);
                                     setPlaceholder1('');
                                     setImageArr(ImageArr.filter(val => val !== placeholder1))
                                 }} />}
                             </div>
+                            <div className={`w-[140px] h-[140px] p-2 rounded-full before2xl:h-36 before2xl:w-36 lg:w-28 lg:h-28 bgGlass -mb-10 xl:-mb-7`}>
+                                {placeholder4 && <Image className="cursor-pointer z-50" alt={placeholder4} src={placeholder4} height={140} width={140} onClick={() => {
+                                    toggleConditon(placeholder4);
+                                    setPlaceholder4('');
+                                    setImageArr(ImageArr.filter(val => val !== placeholder4))
+                                }} />}
+                            </div>
                         </div>
-                        <div className="flex gap-8 items-end">
-                            <div className={`w-[140px] h-[140px] p-2 rounded-full before2xl:h-36 before2xl:w-36 lg:w-28 lg:h-28 bgGlass -mb-10 xl:-mb-5`}>
+                        <div className="flex items-end">
+                            <div className={`w-[140px] h-[140px] p-2 rounded-full before2xl:h-36 before2xl:w-36 lg:w-28 lg:h-28 bgGlass -mb-10 xl:-mb-10`}>
                                 {placeholder2 && <Image className="cursor-pointer z-50" alt={placeholder2} src={placeholder2} height={140} width={140} onClick={() => {
                                     toggleConditon(placeholder2);
                                     setPlaceholder2('');
                                     setImageArr(ImageArr.filter(val => val !== placeholder2))
                                 }} />}
                             </div>
-                            <div className={`w-[140px] h-[140px] p-2 rounded-full before2xl:h-36 before2xl:w-36 lg:w-28 lg:h-28 bgGlass -mb-1 xl:mb-7`}>
+                            <div className={`w-[140px] h-[140px] p-2 rounded-full before2xl:h-36 before2xl:w-36 lg:w-28 lg:h-28 bgGlass -mb-6 xl:-mb-2`}>
                                 {placeholder3 && <Image className="cursor-pointer z-50" alt={placeholder3} src={placeholder3} height={140} width={140} onClick={() => {
                                     toggleConditon(placeholder3);
                                     setPlaceholder3('');
                                     setImageArr(ImageArr.filter(val => val !== placeholder3))
                                 }} />}
                             </div>
+                            <div className={`w-[140px] h-[140px] p-2 rounded-full before2xl:h-36 before2xl:w-36 lg:w-28 lg:h-28 bgGlass mb-6 xl:mb-12`}>
+                                {placeholder5 && <Image className="cursor-pointer z-50" alt={placeholder5} src={placeholder5} height={140} width={140} onClick={() => {
+                                    toggleConditon(placeholder5);
+                                    setPlaceholder5('');
+                                    setImageArr(ImageArr.filter(val => val !== placeholder5))
+                                }} />}
+                            </div>
                         </div>
                     </div>
-                    <div className={`w-[140px] h-[140px] p-2 ${placeholder4 !== "" ? "cursor-pointer bg-transparent" : 'cursor-auto'} rounded-full h-36 w-36 absolute bottom-3 right-[2] hidden bgGlass `}>
+                    <div className={`w-[140px] h-[140px] p-2 ${placeholder6 !== "" ? "cursor-pointer bg-transparent" : 'cursor-auto'} rounded-full h-36 w-36 absolute bottom-3 right-[2] hidden bgGlass `}>
                         <div className="flex justify-center items-center w-full h-full">
-                            {placeholder4 && <Image alt={placeholder4} src={placeholder4} height={140} width={140} onClick={() => {
-                                toggleConditon(placeholder4);
-                                setPlaceholder4('');
-                                setImageArr(ImageArr.filter(val => val !== placeholder4))
+                            {placeholder6 && <Image alt={placeholder6} src={placeholder6} height={140} width={140} onClick={() => {
+                                toggleConditon(placeholder6);
+                                setPlaceholder6('');
+                                setImageArr(ImageArr.filter(val => val !== placeholder6))
                             }} />}
                         </div>
                     </div>
@@ -163,7 +188,7 @@ const Hero = () => {
                     <div className={`flex justify-center cursor-pointer items-center flex-col w-[120px]`}>
                         <div onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} className={`rounded-full bgGlass mainDiv  w-[120px] h-[120px] flex items-center justify-center overflow-hidden relative`} onClick={() => {
                             toggleConditon('/contactActive.png', setCondition);
-                            if (ImageArr.length !== 5) {
+                            if (ImageArr.length !== 7) {
                                 setCondition(false)
                                 return
                             }
@@ -181,7 +206,7 @@ const Hero = () => {
                     <div className={`flex justify-center cursor-pointer items-center flex-col w-[120px] `}>
                         <div onMouseEnter={() => setIsHovered1(true)} onMouseLeave={() => setIsHovered1(false)} className={`rounded-full bgGlass mainDiv  w-[120px] h-[120px] flex items-center justify-center overflow-hidden relative`} onClick={() => {
                             toggleConditon('/omniActive.png', setCondition1);
-                            if (ImageArr.length !== 5) {
+                            if (ImageArr.length !== 7) {
                                 setCondition1(false)
                                 return
                             }
@@ -197,7 +222,7 @@ const Hero = () => {
                     <div className="flex justify-center cursor-pointer items-center flex-col w-[120px]">
                         <div onMouseEnter={() => setIsHovered2(true)} onMouseLeave={() => setIsHovered2(false)} className={`rounded-full bgGlass mainDiv w-[120px] h-[120px] flex items-center justify-center overflow-hidden relative`} onClick={() => {
                             toggleConditon('/schedulingActive.png', setCondition2);
-                            if (ImageArr.length !== 5) {
+                            if (ImageArr.length !== 7) {
                                 setCondition2(false)
                                 return
                             }
@@ -213,7 +238,7 @@ const Hero = () => {
                     <div className="flex justify-center cursor-pointer items-center flex-col w-[120px]">
                         <div onMouseEnter={() => setIsHovered3(true)} onMouseLeave={() => setIsHovered3(false)} className={`rounded-full bgGlass mainDiv w-[120px] h-[120px] flex items-center justify-center overflow-hidden relative`} onClick={() => {
                             toggleConditon('/chatbotsActive.png', setCondition3);
-                            if (ImageArr.length !== 5) {
+                            if (ImageArr.length !== 7) {
                                 setCondition3(false)
                                 return
                             }
@@ -230,7 +255,7 @@ const Hero = () => {
                     <div className="flex justify-center cursor-pointer items-center flex-col w-[120px]">
                         <div onMouseEnter={() => setIsHovered4(true)} onMouseLeave={() => setIsHovered4(false)} className={`rounded-full bgGlass mainDiv w-[120px] h-[120px] flex items-center justify-center overflow-hidden relative`} onClick={() => {
                             toggleConditon('/signatureActive.png', setCondition4);
-                            if (ImageArr.length !== 5) {
+                            if (ImageArr.length !== 7) {
                                 setCondition4(false)
                                 return
                             }
@@ -246,7 +271,7 @@ const Hero = () => {
                     <div className="flex justify-center cursor-pointer items-center flex-col w-[120px]">
                         <div onMouseEnter={() => setIsHovered5(true)} onMouseLeave={() => setIsHovered5(false)} className={`rounded-full bgGlass mainDiv w-[120px] h-[120px] flex items-center justify-center overflow-hidden relative`} onClick={() => {
                             toggleConditon('/secureActive.png', setCondition5);
-                            if (ImageArr.length !== 5) {
+                            if (ImageArr.length !== 7) {
                                 setCondition5(false)
                                 return
                             }
@@ -262,7 +287,7 @@ const Hero = () => {
                     <div className="flex justify-center cursor-pointer items-center flex-col w-[120px]">
                         <div onMouseEnter={() => setIsHovered6(true)} onMouseLeave={() => setIsHovered6(false)} className={`rounded-full bgGlass mainDiv w-[120px] h-[120px] flex items-center  justify-center overflow-hidden relative`} onClick={() => {
                             toggleConditon('/learningActive.png', setCondition6);
-                            if (ImageArr.length !== 5) {
+                            if (ImageArr.length !== 7) {
                                 setCondition6(false)
                                 return
                             }
@@ -278,7 +303,7 @@ const Hero = () => {
                     <div className="flex justify-center cursor-pointer items-center flex-col w-[120px]">
                         <div onMouseEnter={() => setIsHovered7(true)} onMouseLeave={() => setIsHovered7(false)} className={`rounded-full bgGlass mainDiv  w-[120px] h-[120px] flex items-center justify-center overflow-hidden relative`} onClick={() => {
                             toggleConditon('/privateActive.png', setCondition7);
-                            if (ImageArr.length !== 5) {
+                            if (ImageArr.length !== 7) {
                                 setCondition7(false)
                                 return
                             }

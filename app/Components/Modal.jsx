@@ -81,9 +81,9 @@ export default function TransitionsModal({ customClass }) {
                                                 </tbody>
                                             </table>
                                             <div className="flex items-center w-full justify-between text-gray-300 mt-8">
-                                                <div className='h-[0.5px] w-[25%] sm:w-[38%] bg-gray-300'></div>
+                                                <Line />
                                                 <p className='w-fit'>Order Summary</p>
-                                                <div className='h-[0.5px] w-[25%] sm:w-[38%] bg-gray-300'></div>
+                                                <Line />
                                             </div>
                                             <table className="w-full text-sm text-left mt-4">
                                                 <thead className="text-sm border-b-2 ">
@@ -152,8 +152,8 @@ export default function TransitionsModal({ customClass }) {
                                                 <InputLable id="ZIP" label="ZIP" placeholder="12345" />
                                             </div>
                                             <div className="mt-10 flex gap-3 items-start text-sm">
-                                                <input  type="checkbox" className='mt-2' />
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint adipisci repellat aut ipsa asperiores. Eos, sunt quam quas quasi, rem dolores maiores eaque hic optio tenetur facilis maxime autem ad? Neque rem corporis repellat .</p>
+                                                <input type="checkbox" id='checkBox' className='mt-2' />
+                                                <label htmlFor='checkBox'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint adipisci repellat aut ipsa asperiores. Eos, sunt quam quas quasi, rem dolores maiores eaque hic optio tenetur facilis maxime autem ad? Neque rem corporis repellat .</label>
                                             </div>
                                             <button className='w-full flex items-center my-2 gap-1 justify-center h-12 rounded-lg text-white bg-[#8A8A8A] text-base'> <ShoppingCart /> Begin Free Trial</button>
                                             <p className='text-xs text-gray-500 text-center'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum aperiam officiis incidunt enim iusto dignissimos nesciunt eaque tempore! Exercitationem modi deserunt nobis delectus reiciendis qui eligendi repudiandae sequi placeat quasi. Illum odit provident, aspernatur, harum qui sit vitae suscipit reprehenderit ad voluptatem alias, corrupti minus quam! Nulla reprehenderit sunt quam, commodi corrupti et provident? Nulla, nostrum. Labore dignissimos reiciendis autem.</p>
@@ -211,4 +211,8 @@ const Label = ({ label, id }) => (
 
 const TDCmp = ({ className, val }) => (
     <td className={className}>{val}</td>
+)
+
+const Line = () => (
+    <div className='h-[0.5px] w-[25%] sm:w-[38%] bg-gray-300'></div>
 )
