@@ -53,7 +53,7 @@ const Header = ({ custom1, custom2 }) => {
                     </div>
                 </div>
                 <ul
-                    className={`lg:flex lg:items-center absolute lg:static text-gray-500 bg-white lg:z-auto z-[-1] left-0 w-full lg:w-auto lg:pl-0 pl-9 transition-all duration-500 ease-in ${open ? "top-20" : "top-[-490px]"
+                    className={`lg:flex lg:items-center absolute lg:static text-gray-500 lg:z-auto z-[-1] left-0 w-full lg:w-auto lg:pl-0 pl-9 transition-all duration-500 ease-in ${open ? "top-20" : "top-[-490px]"
                         }`}
                 >
                     <div className="lg:my-0 lg:mt-0 mt-4 justify-between items-center text-gray-500 lg:ml-5 visible lg:hidden">
@@ -67,7 +67,7 @@ const Header = ({ custom1, custom2 }) => {
                     <li className="lg:my-0 mt-5 lg:mt-0 lg:ml-20 cursor-pointer">
                         {!userAuthenticated ? <Link href='/login' className={` hover:text-[#1A567D] duration-500 ${custom2}`}>
                             Log In
-                        </Link> : <p> {sesion?.data?.user?.name || JSON.parse(localStorage.getItem("user"))?.company_name} </p>
+                        </Link> : <p className="cursor-default"> {sesion?.data?.user?.name || JSON.parse(localStorage.getItem("user"))?.company_name} </p>
                         }
                     </li>
 
